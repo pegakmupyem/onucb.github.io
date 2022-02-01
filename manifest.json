@@ -3,7 +3,7 @@
   "short_name": "Дудочник®️",
   "description": "веб приложение нашего сайта для просмотра фильмов и сериалов без смс и регистрации",
   "lang": "ru",
-  "start_url": "/apps",
+  "start_url": "/next",
   "scope": "/",
   "display": "standalone",
   "theme_color": "#000000",
