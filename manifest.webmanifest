@@ -1,0 +1,20 @@
+{
+    "name": "Дудочник©️ PWA",
+    "short_name": "Дудочник©️ PWA",
+    "dir": "ltr",
+    "lang": "en-us",
+    "description": "тестирование PWA приложения для сайта",
+    "start_url": "/apps",
+    "scope": "/",
+    "display": "standalone",
+    "theme_color": "#000000",
+    "background_color": "#000000",
+    "orientation": "any",
+    "apple-touch-icon":"/icons/apple-touch-icon.png"
+    "icons": [
+        {
+            "src": "/512x512.png",
+            "sizes": "512x512"
+        }
+    ]
+}
