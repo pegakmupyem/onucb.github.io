@@ -1,5 +1,5 @@
 window.hash = {
-  acthash: "d689c11871f6a3c3ce1cc7c98f6b7969"
+  acthash: "122d8aada4fb07a43deb62e918369032"
 };
 const input = document.getElementById('txt');
 $(document).ready(function(){
