@@ -213,6 +213,31 @@
     .modal-body {
       padding: 2px 16px;
     }
+
+    a.nubex {
+      color: #fff;
+      user-select: none;
+      /* Убираем текстовое выделение */
+      text-decoration: none;
+      /* Убираем подчеркивание */
+      outline: none;
+      /* Убираем контур вокруг ссылки */
+      background-color: #00ff00;
+      /* Цвет фона */
+      padding: 1em 2em;
+      /* Отступ от текста до рамки */
+    }
+
+    a.nubex:active {
+      background-color: #000000;
+      /* Цвет кнопки при нажатии */
+    }
+
+    a.nubex:hover {
+      background-color: #ffffff;
+      /* Цвет кнопки при наведении курсора */
+    }
+
   </style>
 </head>
 
@@ -234,7 +259,7 @@
 
     <div class="modal-content">
       <div class="modal-header">
-        <h1> <input type="button" name="Авторизован 📲" value="/apps" /></h1>
+        <h1> <a href="/zxc" class="nubex"> Авторизован? 📲 </a></h1>
       </div>
       <div class="modal-body">
           <p class="t1" id="tt1"> Введите ваш пароль доступа на месяц и нажмите enter </br> &nbsp; &nbsp; &nbsp; <input id="txt" placeholder=" mecm_nognucku "> </p> </a></p>
