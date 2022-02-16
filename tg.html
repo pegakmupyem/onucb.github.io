@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>Заплати и приходи, код вводи</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=50% initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body><center> </br> </br> </br> </br> </br> 
+<h1>Введите пароль и нажмите enter:</h1> </br> 
+      <input id="txt" placeholder="Введите пароль">
+<script src="./js/checkauth.js"></script>
+<script src="./js/checking.js"></script>
+</br> </br> 
+ 
+<h3> 
+<script async src="https://telegram.org/js/telegram-widget.js?15" data-telegram-login="PiperPiedBot" data-size="small" data-onauth="onTelegramAuth(user)" data-request-access="write"></script>
+<script type="text/javascript">
+  function onTelegramAuth(user) {
+    alert('Logged in as ' + user.first_name + ' ' + user.last_name + ' (' + user.id + (user.username ? ', @' + user.username : '') + ')');
+  }
+</script>
+</h3> 
+</center>
+</body>
+</html>
