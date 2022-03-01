@@ -91,9 +91,9 @@ if ('serviceWorker' in navigator) {
   </div>
 
   <script>
-const form = document.querySelector('form');
+
 const ul = document.querySelector('ul');
-const fav = document.getElementsByClassName('items');
+
 const button = document.getElementById('dl');
 const input = document.getElementById('item');
 let itemsArray = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
