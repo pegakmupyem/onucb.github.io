@@ -56,10 +56,6 @@ if ('serviceWorker' in navigator) {
 
   <script src="https://use.fontawesome.com/4ca20d00e4.js"></script>	
   <title id="websiteTitle">@Piper_Pied 🖥</title>
-
-
- 
-
 </head>
 <body>
   <div class="container">
@@ -303,77 +299,26 @@ if ('serviceWorker' in navigator) {
 </script>
 </br> 
 
+<p align="center"><a target="_blink" href="https://kinoserials.ml/kino/time?id=446136&title=Tomb%20Raider:%20Лара%20Крофт%20(undefined)"><img src="/donate.png" alt="Поддержать разработчика" width="44%" height="8%"></a></p>
+</br> 
   <div class="small-container">
     <div>
       <button class="izb" id="izb">➕ Добавить в избранное?</button>
     </div>
   </div>
-  </br> 
-
-<p align="center"><a target="_blink" href="/donat/"><img src="/donate.png" alt="Поддержать разработчика" width="44%" height="8%"></a></p>
-</br> 
-
-<hr color="red" align="left" size="1px"> 
-
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // конечная дата
-      const deadline = new Date(new Date().getFullYear(), new Date().getMonth() + 1, 01);
-      // id таймера
-      let timerId = null;
-      // склонение числительных
-      function declensionNum(num, words) {
-        return words[(num % 100 > 4 && num % 100 < 20) ? 2 : [2, 0, 1, 1, 1, 2][(num % 10 < 5) ? num % 10 : 5]];
-      }
-      // вычисляем разницу дат и устанавливаем оставшееся времени в качестве содержимого элементов
-      function countdownTimer() {
-        const diff = deadline - new Date();
-        if (diff <= 0) {
-          clearInterval(timerId);
-        }
-        const days = diff > 0 ? Math.floor(diff / 1000 / 60 / 60 / 24) : 0;
-        const hours = diff > 0 ? Math.floor(diff / 1000 / 60 / 60) % 24 : 0;
-        const minutes = diff > 0 ? Math.floor(diff / 1000 / 60) % 60 : 0;
-        const seconds = diff > 0 ? Math.floor(diff / 1000) % 60 : 0;
-        $days.textContent = days < 10 ? '0' + days : days;
-        $hours.textContent = hours < 10 ? '0' + hours : hours;
-        $minutes.textContent = minutes < 10 ? '0' + minutes : minutes;
-        $seconds.textContent = seconds < 10 ? '0' + seconds : seconds;
-        $days.dataset.title = declensionNum(days, ['день', 'дня', 'дней']);
-        $hours.dataset.title = declensionNum(hours, ['час', 'часа', 'часов']);
-        $minutes.dataset.title = declensionNum(minutes, ['минута', 'минуты', 'минут']);
-        $seconds.dataset.title = declensionNum(seconds, ['секунда', 'секунды', 'секунд']);
-      }
-      // получаем элементы, содержащие компоненты даты
-      const $days = document.querySelector('.timer__days');
-      const $hours = document.querySelector('.timer__hours');
-      const $minutes = document.querySelector('.timer__minutes');
-      const $seconds = document.querySelector('.timer__seconds');
-      // вызываем функцию countdownTimer
-      countdownTimer();
-      // вызываем функцию countdownTimer каждую секунду
-      timerId = setInterval(countdownTimer, 1000);
-    });
-  </script>
-
-<div class="timer">
-    <b> До конца текущей подписки осталось: </b>
-    <div class="timer__items"> <p align="center">
-      <div class="timer__item timer__days">00</div> дней, <div class="timer__item timer__hours">00</div> часов, <div class="timer__item timer__minutes">00</div> минут, <div class="timer__item timer__seconds">00</div> секунд </p>
-    </div>
-  </div>
-
-<hr color="red" align="left" size="1px">
-
+  </br> </br>
 <hr color="green" align="left" size="1px">
 	<h1 class="h1" style="font-size: 1.1em; line-height: 1em; font-weight: 700; margin-top: 1em;">Похожие фильмы или сериалы:</h1>
     <div class="fadeInElement" style="overflow: hidden; overflow-x: scroll; white-space: nowrap; margin-left: 5%; margin-right: 5%;"></div>
 <hr color="green" align="left" size="1px">
     Если Вы владелец авторских прав, просим Вас учесть, что все плееры в приложении из сторонних API источников. Пишите напрямую по контактным данным этих видео-хостингов, для соблюдения DMCA. В 99% случаев они удаляют спорный контент в течении 24 часов. Плееры недоступные на первоисточнике априори не будут отображаться у нас в приложении. </br> 
+<hr color="red" align="left" size="1px"> </br> 
 
-<hr color="red" align="left" size="1px"> 
+<div onclick="window.open('/iads')" class="footer">NoAds iOS 14+</div> </br>
 
-</br> </br> 
+<div onclick="window.open('https://ttttt.me/PiperPiedBot')" class="footer">Наш бот в Телеграмм ®️</div> </br>
+
+<hr color="red" align="left" size="1px"> </br> </br> 
 <script src="/js/scripts.js"></script>
 <script src="/js/favorites.js"></script>
 <script src="//yohoho.cc/yo.js"></script>
