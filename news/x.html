@@ -154,35 +154,7 @@ number = (arr[month]);
 					 				 $('.items').append('<li class="item" style="margin-bottom: 1rem">    <a class="link" href="/kino?id='+item.kinopoiskId+'&title='+item.nameRu+' ('+item.year+')"  title="'+item.nameRu+' ('+item.year+')">        <div class="cover-wrap">          <div class="cover js-b-lazy fadeIn animated" style="background-image: url('+item.posterUrlPreview+');"></div></div>     <div class="description">     <h3 class="title">'+item.nameRu+'</h3>      <span class="desc">     <span class="rating">'+item.rating+'</span>    <span class="year">'+item.year+'</span></span></div></a></li>');
 							}
 					}
-	});  	$.ajax({
-			 		async: true,
-			 		crossDomain: true,
-					url: 'https://kinopoiskapiunofficial.tech/api/v2.2/films?order=NUM_VOTE&type=ALL&ratingFrom=0&ratingTo=10&yearFrom=2022&yearTo=2022&page=4',
-					type: 'GET',
-			 		headers: {'X-API-KEY':'1281ba0d-593b-4f3e-8b14-2b63e66ae00a'},
-					success: function(response){
-	         				var a = response.items;
-			 				var index, len;
-			 				for (index = 0, len = a.length; index < len; ++index) {
-				 				var item = a[index];
-					 				 $('.items').append('<li class="item" style="margin-bottom: 1rem">    <a class="link" href="/kino?id='+item.kinopoiskId+'&title='+item.nameRu+' ('+item.year+')"  title="'+item.nameRu+' ('+item.year+')">        <div class="cover-wrap">          <div class="cover js-b-lazy fadeIn animated" style="background-image: url('+item.posterUrlPreview+');"></div></div>     <div class="description">     <h3 class="title">'+item.nameRu+'</h3>      <span class="desc">     <span class="rating">'+item.rating+'</span>    <span class="year">'+item.year+'</span></span></div></a></li>');
-							}
-					}
-	});  	$.ajax({
-			 		async: true,
-			 		crossDomain: true,
-					url: 'https://kinopoiskapiunofficial.tech/api/v2.2/films?order=NUM_VOTE&type=ALL&ratingFrom=0&ratingTo=10&yearFrom=2022&yearTo=2022&page=5',
-					type: 'GET',
-			 		headers: {'X-API-KEY':'1281ba0d-593b-4f3e-8b14-2b63e66ae00a'},
-					success: function(response){
-	         				var a = response.items;
-			 				var index, len;
-			 				for (index = 0, len = a.length; index < len; ++index) {
-				 				var item = a[index];
-					 				 $('.items').append('<li class="item" style="margin-bottom: 1rem">    <a class="link" href="/kino?id='+item.kinopoiskId+'&title='+item.nameRu+' ('+item.year+')"  title="'+item.nameRu+' ('+item.year+')">        <div class="cover-wrap">          <div class="cover js-b-lazy fadeIn animated" style="background-image: url('+item.posterUrlPreview+');"></div></div>     <div class="description">     <h3 class="title">'+item.nameRu+'</h3>      <span class="desc">     <span class="rating">'+item.rating+'</span>    <span class="year">'+item.year+'</span></span></div></a></li>');
-							}
-					}
-	});  
+	});  	
 	
 function search(){
 	var text = document.getElementById('text').value;
