@@ -135,13 +135,13 @@ if ('serviceWorker' in navigator) {
         </div>
       </div>
     <div id="actions">
+                                <button class="izb" id="izb">➕ Добавить в избранное?</button> </br> 
                 <a href="#" onclick="history.back();return false;" class="history-back"> 🔙 Назад </a> | 
 		<a id="players" class="active"> 1️⃣ Плеер №1 </a>
 		<span id="sp1" class="active">|</span>
 		<a onclick="selectTrailers();" id="trailers"> 2️⃣ Плеер №2 </a>
 		<span id="sp2">|</span>
-		<a onclick="selectTorrents();" id="torrents"> 3️⃣ Плеер №3 </a> | 
-                <button class="izb" id="izb">➕ Добавить в избранное?</button>
+		<a onclick="selectTorrents();" id="torrents"> 3️⃣ Плеер №3 </a>
 	</div>
 	<div id="containers" style="position: relative; margin: 5px;">
 		<iframe id="iframe" style="border:0px; width: 100%; height: 95vmin;" src="https://apimovie.tobaco.ws/embed/kp/'+id+'"></iframe>
