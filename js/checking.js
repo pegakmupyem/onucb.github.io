@@ -10,8 +10,9 @@ $(document).ready(function(){
                        localStorage.setItem('pass', JSON.stringify(hash.acthash));
                        window.open('/search')
                      } else {
+                       alert('📵 Пароль введён не верно‼️');
                        localStorage.removeItem('pass');
-                       localStorage.setItem('pass', JSON.stringify("donat"));
+                       localStorage.setItem('pass', JSON.stringify("noLLIeJl_Haxyū"));
                        window.open('/password')
                      }
                    }
