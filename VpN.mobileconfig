@@ -96,12 +96,12 @@
 			<key>PayloadDisplayName</key>
 			<string>VPN</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.vpn.managed.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</string>
+			<string>com.apple.vpn.managed.c0b36d20-a2fe-11ec-b230-0800200c9a66</string>
 			<key>PayloadType</key>
 			<string>com.apple.vpn.managed</string>
 			<key>PayloadUUID</key>
 			<!-- PayloadUUID -->
-			<string>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</string>
+			<string>c0b36d20-a2fe-11ec-b230-0800200c9a66</string>
 			<key>PayloadVersion</key>
 			<real>1</real>
 			<key>Proxies</key>
@@ -121,14 +121,14 @@
 	<string>VPN on Demand-Profildatei</string>
 	<key>PayloadIdentifier</key>
 	<!-- PayloadIdentifier -->
-	<string>xxxxxxxxxxxxxxxxxx</string>
+	<string>c0b36d20-a2fe-11ec-b230-0800200c9a66</string>
 	<key>PayloadRemovalDisallowed</key>
 	<false/>
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
 	<!-- PayloadUUID -->
-	<string>xxxxxxxxxxxxxxxxxx</string>
+	<string>c0b36d20-a2fe-11ec-b230-0800200c9a66</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 </dict>
