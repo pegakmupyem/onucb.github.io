@@ -2,88 +2,122 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-  <key>PayloadContent</key>
-  <array>
-    <dict>
-      <key>PayloadType</key>
-      <string>com.apple.vpn.managed</string>
-      <key>PayloadVersion</key>
-      <integer>1</integer>
-      <key>PayloadIdentifier</key>
-      <string>net.vallahaye.vpn.autoconnect</string>
-      <key>PayloadUUID</key>
-      <string>fa95c97f-13e1-43ad-ae13-5cc5b4337310</string>
-      <key>PayloadDisplayName</key>
-      <string>Autoconnect VPN</string>
-      <key>UserDefinedName</key>
-      <string>Autoconnect VPN</string>
-      <key>VPNType</key>
-      <string>L2TP</string>
-      <key>PPP</key>
-      <dict>
-        <key>AuthName</key>
-        <string>{{ vpn_autoconnect_ppp_auth_name }}</string>
-        <key>AuthPassword</key>
-        <string>{{ vpn_autoconnect_ppp_auth_password }}</string>
-        <key>TokenCard</key>
-        <false/>
-        <key>CommRemoteAddress</key>
-        <string>{{ vpn_autoconnect_ppp_remote_addr }}</string>
-      </dict>
-      <key>IPSec</key>
-      <dict>
-        <key>AuthenticationMethod</key>
-        <string>SharedSecret</string>
-        <key>LocalIdentifierType</key>
-        <string>KeyID</string>
-        <key>SharedSecret</key>
-        <data>{{ vpn_autoconnect_ipsec_psk | b64encode }}</data>
-      </dict>
-      <key>IPv4</key>
-      <dict>
-        <key>OverridePrimary</key>
-        <integer>1</integer>
-      </dict>
-      <key>OnDemandEnabled</key>
-      <integer>1</integer>
-      <key>OnDemandRules</key>
-      <array>
-        {% if vpn_autoconnect_ondemand_safe_wifi_ssids|length > 0 %}
+    <key>PayloadContent</key>
+    <array>
         <dict>
-          <key>InterfaceTypeMatch</key>
-          <string>WiFi</string>
-          <key>SSIDMatch</key>
-          <array>
-          {% for item in vpn_autoconnect_ondemand_safe_wifi_ssids %}
-            <string>{{ item }}</string>
-          {% endfor %}
-          </array>
-          <key>Action</key>
-          <string>Disconnect</string>
+            <key>IKEv2</key>
+            <dict>
+
+                <!-- Username and password from ipsec.secrets -->
+                <key>AuthName</key>
+                <string>obama</string>
+                <key>AuthPassword</key>
+                <string>SuperPassword123</string>
+
+                <!-- Hostname or IP address of VPN server.
+                 Chosing IP address instead of DNS name can avoid issues with client DNS resolvers and speed up connection process. -->
+                <key>RemoteAddress</key>
+                <string>43.12.22.134</string>
+
+                <!-- leftid in ipsec.conf -->
+                <key>RemoteIdentifier</key>
+                <string>tunnel.zhovner.com</string>
+
+                <key>AuthenticationMethod</key>
+                <string>Certificate</string>
+                <key>ChildSecurityAssociationParameters</key>
+                <dict>
+
+                <!-- in ipsec.conf this proposal is: ike=aes256-sha256-modp2048 -->
+                    <key>DiffieHellmanGroup</key>
+                    <integer>14</integer>
+                    <key>EncryptionAlgorithm</key>
+                    <string>AES-256</string>
+                    <key>IntegrityAlgorithm</key>
+                    <string>SHA2-256</string>
+                    <key>LifeTimeInMinutes</key>
+                    <integer>1440</integer>
+                </dict>
+                <key>DeadPeerDetectionRate</key>
+
+                <!--
+                    None (Disable)
+                    Low (keepalive sent every 30 minutes)
+                    Medium (keepalive sent every 10 minutes)
+                    High (keepalive sent every 1 minute)
+                -->
+                <string>High</string>
+                <key>ExtendedAuthEnabled</key>
+                <true/>
+                <key>IKESecurityAssociationParameters</key>
+                <dict>
+                    <key>DiffieHellmanGroup</key>
+                    <integer>14</integer>
+                    <key>EncryptionAlgorithm</key>
+                    <string>AES-256</string>
+                    <key>IntegrityAlgorithm</key>
+                    <string>SHA2-256</string>
+                    <key>LifeTimeInMinutes</key>
+                    <integer>1440</integer>
+                </dict>
+
+                <!--
+                Always On OnDemand Rule
+                Cen be disabled in connection preferences by "On Demand" checkbox
+                http://www.v2ex.com/t/137653
+                https://developer.apple.com/library/mac/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html
+                https://github.com/iphoting/ovpnmcgen.rb
+                -->
+                <key>OnDemandEnabled</key>
+                    <integer>1</integer>
+                    <key>OnDemandRules</key>
+                    <array>
+                        <dict>
+                            <key>Action</key>
+                            <string>Connect</string>
+                        </dict>
+                    </array>
+            </dict>
+            <key>IPv4</key>
+            <dict>
+                <key>OverridePrimary</key>
+                <integer>1</integer>
+            </dict>
+            <key>PayloadDescription</key>
+            <string>Configures VPN settings</string>
+            <key>PayloadDisplayName</key>
+            <string>VPN</string>
+            <key>PayloadIdentifier</key>
+            <string>com.apple.vpn.managed.96C1C38F-D4D6-472E-BA90-9117ED8896B5</string>
+            <key>PayloadType</key>
+            <string>com.apple.vpn.managed</string>
+            <key>PayloadUUID</key>
+            <string>96C1C38F-D4D6-472E-BA90-9117ED8896B5</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+
+            <!-- VPN connection name in Network Preferences -->
+            <key>UserDefinedName</key>
+            <string>London VPN</string>
+            <key>VPNType</key>
+            <string>IKEv2</string>
         </dict>
-        {% endif %}
-        <dict>
-          <key>Action</key>
-          <string>Connect</string>
-        </dict>
-      </array>
-    </dict>
-  </array>
-  <key>PayloadDescription</key>
-  <string>A collection of VPN configurations</string>
-  <key>PayloadDisplayName</key>
-  <string>VPN Configurations</string>
-  <key>PayloadIdentifier</key>
-  <string>net.vallahaye.vpn</string>
-  <key>PayloadOrganization</key>
-  <string>Valentin Lahaye</string>
-  <key>PayloadUUID</key>
-  <string>3432fdfa-b8cb-4e9a-85ee-bd803f378182</string>
-  <key>PayloadRemovalDisallowed</key>
-  <false/>
-  <key>PayloadType</key>
-  <string>Configuration</string>
-  <key>PayloadVersion</key>
-  <integer>1</integer>
+    </array>
+
+    <!-- Set the name to whatever you like, it is used in the profile list on the device -->
+    <key>PayloadDisplayName</key>
+    <string>My Super IKEv2 VPN</string>
+
+    <!-- A reverse-DNS style identifier (com.example.myprofile, for example) that identifies the profile. This string is used to determine whether a new profile should replace an existing one or should be added. -->
+    <key>PayloadIdentifier</key>
+    <string>com.zhovner.tunnel</string>
+
+    <!-- A globally unique identifier, use uuidgen on Linux/Mac OS X to generate it -->
+    <key>PayloadUUID</key>
+    <string>F3FAD91C-019C-4A79-87A1-CF334C583339</string>
+    <key>PayloadType</key>
+    <string>Configuration</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
 </dict>
 </plist>
