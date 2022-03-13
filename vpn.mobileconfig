@@ -98,7 +98,7 @@
 
             <!-- VPN connection name in Network Preferences -->
             <key>UserDefinedName</key>
-            <string>pegakmop VPN</string>
+            <string>vpn</string>
             <key>VPNType</key>
             <string>L2TP</string>
         </dict>
