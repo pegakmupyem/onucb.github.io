@@ -16,19 +16,19 @@
 				<string>KeyID</string>
 				<key>RemoteAddress</key>
 				<!-- DDNS-URL der FRITZ!Box -->				
-				<string>DDNS-URL der FRITZ!Box</string>
+				<string>176.113.58.33</string>
 				<key>SharedSecret</key>
 				<data>
-				xxxxxxxxxxxxxxxxxx
+				pegakmop
 				</data>
 				<key>XAuthEnabled</key>
 				<integer>1</integer>
 				<key>XAuthName</key>
 				<!-- FRITZ!Box Benutzername -->
-				<string>FRITZ!Box Benutzername</string>
+				<string>vpn</string>
 				<key>XAuthPassword</key>
 				<!-- FRITZ!Box Passwort des Benutzers -->
-				<string>xxxxxxxxxxxxxxxxxx</string>
+				<string>vpn</string>
 				<!-- VPN-On-Demand Codeblock -->
 				<key>OnDemandEnabled</key>
 				<integer>1</integer>
