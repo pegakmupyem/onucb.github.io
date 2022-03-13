@@ -10,14 +10,14 @@
 
                 <!-- Username and password from ipsec.secrets -->
                 <key>AuthName</key>
-                <string>obama</string>
+                <string>vpn</string>
                 <key>AuthPassword</key>
-                <string>SuperPassword123</string>
+                <string>vpn</string>
 
                 <!-- Hostname or IP address of VPN server.
                  Chosing IP address instead of DNS name can avoid issues with client DNS resolvers and speed up connection process. -->
                 <key>RemoteAddress</key>
-                <string>43.12.22.134</string>
+                <string>176.113.58.33</string>
 
                 <!-- leftid in ipsec.conf -->
                 <key>RemoteIdentifier</key>
