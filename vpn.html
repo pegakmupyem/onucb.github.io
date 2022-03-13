@@ -1,0 +1,437 @@
+<! doctype html>
+<html lang="ru">
+  <голова>
+    <title>Генератор профилей iOS VPN</title>
+    <!-- Обязательные метатеги -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <стиль>
+            тело {
+                набивка: 60px 60px 60px 60px;
+}
+.header{
+                margin-top: 20 пикселей;
+                margin-bottom: 40px;
+}
+        </style>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51
+  </head>
+  <тело>
+
+    <!-- Необязательный JavaScript -->
+    <!-- jQuery сначала, затем Popper.js, затем Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="анонимный"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZ
+    <form class="form-horizontal">
+        <набор полей>
+            <!-- Имя формы -->
+            <legend>Генератор профилей iOS VPN от Криса Линквиста (@klinquist)</legend>
+
+            <div class='заголовок'>
+                <p> Эта страница сгенерирует .mobileprofile, который при размещении на вашем устройстве iOS автоматически подключится к VPN. Вы можете исключить SSID из правил автоподключения VPN.</p>
+                <p>Файл, созданный на этой странице, выполняется в вашем браузере - ни одна из этих сведений не отправляется на эту веб-страницу. У вас также есть возможность загрузить этот файл и запустить его локально.</p>
+            </div>
+            <div class='инструкции'>
+                <h5>Инструкции</h5>
+                <ul>
+                    <li>Заполните форму ниже и нажмите кнопку Создать</li>
+                    <li>Сбросить или отправить файл по электронной почте на устройство iOS</li>
+                </ul>
+            </div>
+            <div class="form-group">
+                <div class="col-md-4">
+                    <button id="pia" name="pia" class="btn btn-info btn-sm">Автозаполнение информацией о сервере частного доступа в Интернет</button>
+                </div>
+            </div>
+            <!-- Ввод текста-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="name">Имя (которое будет отображаться на странице настроек VPN)</label>
+                <div class="col-md-4">
+                    <input id="name" name="name" type="text" placeholder="" class="form-control input-md" value="Автоподключение VPN">
+                </div>
+            </div>
+            <!-- Ввод текста-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="identifier">Идентификатор (сделайте это уникальным, если планируете импортировать >1 профиль)</label>
+                <div class="col-md-4">
+                    <input id="identifier" name="identifier" type="text" placeholder="" class="form-control input-md" value='com.vpn.vpn1'>
+                </div>
+            </div>
+
+            <!-- Выберите Базовый -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="autoconnect">Автоподключение</label>
+                <div class="col-md-4">
+                    <select id="autoconnect" name="autoconnect" class="form-control">
+                        <option value="wifi">Только на Wi-Fi</option>
+                        <option value="cellular">На Wi-Fi и сотовой связи</option>
+                        <option value="none">Не подключайтесь автоматически</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Выберите Базовый -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="vpntype">Тип VPN</label>
+                <div class="col-md-4">
+                    <выбрать id="vpntype" name="vpntype" class="form-control">
+                        <option value="l2tp">L2TP</option>
+                        <option value="ikev2">IKEv2 (еще не поддерживается)</option>
+                        <option value="ipsec">IPSEC</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Ввод текста-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="hostname">Имя хоста</label>
+                <div class="col-md-4">
+                    <input id="hostname" name="hostname" type="text" placeholder="" class="form-control input-md">
+                </div>
+            </div>
+
+            <!-- Ввод текста-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="login">Вход</label>
+                <div class="col-md-4">
+                    <input id="login" name="login" type="text" placeholder="" class="form-control input-md">
+                </div>
+            </div>
+            <!-- Ввод текста-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="password">Пароль</label>
+                <div class="col-md-4">
+                    <input id="password" name="password" type="password" placeholder="" class="form-control input-md">
+                </div>
+            </div>
+            <!-- Ввод текста-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="sharedsecret">Общий секрет</label>
+                <div class="col-md-4">
+                    <input id="sharedsecret" name="sharedsecret" type="password" placeholder="" class="form-control input-md">
+                </div>
+            </div>
+            
+            <div class="form-group" id="exchangemodeformgroup" style="display: none;">
+                <!-- Выберите Базовый -->
+                <label class="col-md-4 control-label" for="exchangemode">Режим обмена</label>
+                <div class="col-md-4">
+                    <select id="exchangemode" name="exchangemode" class="form-control">
+                        <option value="main">Основной режим</option>
+                        <option value="aggressive">Агрессивный режим</option>
+                    </select>
+                </div>
+                <!-- Ввод текста-->
+                <div class="form-group" id="localidentifierformgroup" style=" margin-top: 16px; отображение: none;">
+                    <label class="col-md-4 control-label" for="localidentifier">Локальный идентификатор (группа)</label>
+                    <div class="col-md-4">
+                        <input id="localidentifier" name="localidentifier" type="text" placeholder="" class="form-control input-md" value=''>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ввод текста-->
+            <div class="form-group" id='ssidformgroup'>
+                <label class="col-md-4 control-label" for="ssids">Список SSID, разделенных запятыми, к которым при подключении вы НЕ хотите, чтобы VPN автоматически подключался</label>
+                <div class="col-md-4">
+                    <input id="ssids" name="ssids" type="text" placeholder="" class="form-control input-md">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-4">
+Отправить весь трафик через VPN? <input id="override" name="override" type="checkbox" placeholder="" checked>
+                </div>
+            </div>
+
+            <!-- Кнопка -->
+            <div class="form-group">
+                <div class="col-md-4">
+                    <button id="submit" name="submit" class="btn btn-primary">Создать</button>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+
+
+    <скрипт>
+
+
+        функция generateUUID () { // Генерирует RUUID
+            var possible = 'ABCDEF0123456789';
+            let lengths = [8,4,4,4,12];
+            пусть фрагменты = [];
+            для (var j = 0; j < lengths.length; j++){
+                var text = '';
+                for (var i = 0; i < lengths[j]; i++) text += possible.charAt(Math.floor(Math.random() * possible.length));
+                chunks.push (текст);
+
+            }
+            return chunks.join('-');
+        };
+        var xmlString = '';
+        xmlString += '<? xml version="1.0" encoding="UTF-8"? >\n';
+        xmlString += '<! DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//RU" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">\n';
+        xmlString += '<plist version="1.0">\n';
+        xmlString += '<dict>\n';
+        xmlString += ' <key>PayloadContent</key>\n';
+        xmlString += ' <массив> ';
+        xmlString += ' <dict>\n';
+        xmlString += ' <key>UserDefinedName</key>\n';
+        xmlString += ' <string>{{name}}</string>\n';
+        xmlString += ' <key>PayloadDisplayName</key>\n';
+        xmlString += ' <string>{{name1}}</string>\n';
+        xmlString += ' <key>PayloadIdentifier</key>\n';
+        xmlString += ' <string>{{identifier}}</string>\n';
+        xmlString += ' <key>PayloadUUID</key>\n';
+        xmlString += ' <string>{{uuid1}}</string>\n';
+        xmlString += '{{vpnTypeDictionaries}}';
+        xmlString += '{{onDemandRules}}';
+        xmlString += ' <key>OverridePrimary</key>\n';
+        xmlString += ' <{{OverridePrimary}}/>\n';
+        xmlString += ' <key>IPv4</key>\n';
+        xmlString += ' <dict>\n';
+        xmlString += ' <key>OverridePrimary</key>\n';
+        xmlString += ' <integer>1</integer>\n';
+        xmlString += ' </dict>\n';
+        xmlString += ' <key>Тип полезной нагрузки</key>\n';
+        xmlString += ' <string>com.apple.vpn.managed</string>\n';
+        xmlString += ' <key>PayloadVersion</key>\n';
+        xmlString += ' <integer>1</integer>\n';
+        xmlString += ' </dict>\n';
+        xmlString += '</array>\n';
+        xmlString += ' <key>PayloadDisplayName</key>\n';
+        xmlString += ' <string>Конфигурации VPN</string>\n';
+        xmlString += ' <key>PayloadIdentifier</key>\n';
+        xmlString += ' <string>{{uuid2}}</string>\n';
+        xmlString += ' <key>PayloadRemovalDisallowed</key>\n';
+        xmlString += ' <false/>\n';
+        xmlString += ' <key>Тип полезной нагрузки</key>\n';
+        xmlString += ' <string>Конфигурация</string>\n';
+        xmlString += ' <key>PayloadUUID</key>\n';
+        xmlString += ' <string>{{uuid3}}</string>\n';
+        xmlString += ' <key>PayloadVersion</key>\n';
+        xmlString += ' <integer>1</integer>\n';
+        xmlString += '</dict>\n';
+        xmlString += '</plist>';
+
+        var vpnTypeL2tp = '';
+        vpnTypeL2tp += ' <key>VPNType</key>\n';
+        vpnTypeL2tp += ' <string>L2TP</string>\n';
+        vpnTypeL2tp += ' <key>IPSec</key>\n';
+        vpnTypeL2tp += ' <dict>\n';
+        vpnTypeL2tp += ' <key>AuthenticationMethod</key>\n';
+        vpnTypeL2tp += ' <string>SharedSecret</string>\n';
+        vpnTypeL2tp += ' <key>LocalIdentifierType</key>\n';
+        vpnTypeL2tp += ' <string>KeyID</string>\n';
+        vpnTypeL2tp += ' <key>SharedSecret</key>\n';
+        vpnTypeL2tp += ' <string>{{sharedsecret}}</string>\n';
+        vpnTypeL2tp += ' </dict>\n';
+        vpnTypeL2tp += ' <key>PPP</key>\n';
+        vpnTypeL2tp += ' <dict>\n';
+        vpnTypeL2tp += ' <key>Имя авторизации</key>\n';
+        vpnTypeL2tp += ' <string>{{login}}</string>\n';
+        vpnTypeL2tp += ' <key>AuthPassword</key>\n';
+        vpnTypeL2tp += ' <string>{{password}}</string>\n';
+        vpnTypeL2tp += ' <key>CommRemoteAddress</key>\n';
+        vpnTypeL2tp += ' <string>{{hostname}}</string>\n';
+        vpnTypeL2tp += ' </dict>\n';
+
+        var vpnTypeIpsec = '';
+        vpnTypeIpsec += ' <key>VPNType</key>\n';
+        vpnTypeIpsec += ' <string>IPSec</string>\n';
+        vpnTypeIpsec += ' <key>IPSec</key>\n';
+        vpnTypeIpsec += ' <dict>\n';
+        vpnTypeIpsec += ' <key>Удаленный адрес</key>\n';
+        vpnTypeIpsec += ' <string>{{hostname}}</string>\n';
+        vpnTypeIpsec += ' <key>AuthenticationMethod</key>\n';
+        vpnTypeIpsec += ' <string>SharedSecret</string>\n';
+        vpnTypeIpsec += ' <key>SharedSecret</key>\n';
+        vpnTypeIpsec += ' <string>{{sharedsecret}}</string>\n';
+        vpnTypeIpsec += ' <key>XAuthEnabled</key>\n';
+        vpnTypeIpsec += ' <integer>1</integer>\n';
+        vpnTypeIpsec += ' <key>XAuthName</key>\n';
+        vpnTypeIpsec += ' <string>{{login}}</string>\n';
+        vpnTypeIpsec += ' <key>XAuthPassword</key>\n';
+        vpnTypeIpsec += ' <string>{{password}}</string>\n';
+        vpnTypeIpsec += ' <key>LocalIdentifier</key>\n';
+        vpnTypeIpsec += ' <string>{{localidentifier}}</string>\n';
+        vpnTypeIpsec += ' <key>LocalIdentifierType</key>\n';
+        vpnTypeIpsec += ' <string>KeyID</string>\n';
+        vpnTypeIpsec += ' </dict>\n';
+
+        onDemandRules = '';
+        onDemandRules += '<key>OnDemandEnabled</key>\n';
+        onDemandRules += ' <integer>{{onDemandEnabled}}</integer>\n';
+        onDemandRules += ' {{onDemandRulesDict}}'
+
+
+        onDemandRulesArr = [];
+        
+        var wifiDict = ''
+        wifiDict += ' <dict>\n';
+        wifiDict += ' <key>InterfaceTypeMatch</key>\n';
+        wifiDict += ' <string>WiFi</string>\n';
+        wifiDict += ' <key>Действие</key>\n';
+        wifiDict += ' <string>Connect</string>\n';
+        wifiDict += ' </dict>\n';
+
+        var wifiDefaultDict = '';
+        wifiDefaultDict += ' <dict>\n';
+        wifiDefaultDict += ' <!-- VPN Состояние по умолчанию -->\n';
+        wifiDefaultDict += ' <key>Действие</key>\n';
+        wifiDefaultDict += ' <string>Отключить</string>\n'; //Состояние по умолчанию сообщает ему, что делать по умолчанию. Если включен только Wi-Fi, он должен быть отключен (поэтому отключите его на сотовой связи)
+        wifiDefaultDict += ' </dict>\n';
+
+        var cellularDefaultDict = '';
+        cellularDefaultDict += ' <dict>\n';
+        cellularDefaultDict += ' <!-- Состояние VPN по умолчанию -->\n';
+        cellularDefaultDict += ' <key>Действие</key>\n';
+        cellularDefaultDict += ' <string>Connect</string>\n'; //Состояние по умолчанию говорит ему, что делать по умолчанию. Если включен только Wi-Fi, он должен быть отключен (поэтому отключите его на сотовой связи)
+        cellularDefaultDict += ' </dict>\n';
+
+
+        $(document).ready(function () {
+
+            функция загрузки (имя файла, текст) {
+                var element = document.createElement('a');
+                element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+                element.setAttribute('download', имя файла);
+                element.style.display = 'none';
+                document.body.appendChild (элемент);
+                element.click();
+                document.body.removeChild (элемент);
+            }
+
+            $( "#autoconnect" ).change(function() {
+                if ($("#autoconnect").val() == "none") $("#ssidformgroup").hide()
+                if ($("#autoconnect").val() == "cellular") $("#ssidformgroup").show()
+                if ($("#autoconnect").val() == "wifi") $("#ssidformgroup").show()
+            });
+
+            $('#vpntype').change(function () {
+                if ($('#vpntype').val() == 'l2tp') $('#exchangemodeformgroup').hide()
+                if ($('#vpntype').val() == 'ipsec') $('#exchangemodeformgroup').show()
+            });
+            
+            $('#exchangemode').change(function () {
+                if ($('#exchangemode').val() == 'main') {
+                    $('#localidentifier').empty();
+                    $('#localidentifierformgroup').hide();
+                }
+                if ($('#exchangemode').val() == 'агрессивный') {
+                    let host = $('#hostname').val();
+                    $('#localidentifier').val(host);
+                    $('#localidentifierformgroup').show();
+                }
+            });
+
+            $('#pia').click(function(e) {
+                e.preventDefault();
+                $('#sharedsecret').val('mysafety')
+                $('#hostname').val('us-california.privateinternetaccess.com')
+                $('#login').attr("placeholder", "Ваше имя пользователя PIA 'x'");
+            });
+
+
+            $('#submit').click(function(e) {
+                e.preventDefault();
+                var login = $("#login").val(),
+                password = $('#password').val(),
+                sharedsecret = $('#sharedsecret').val(),
+                ssids = $('#ssids').val(),
+                vpntype = $('#vpntype').val(),
+                name = $('#name').val() || 'Autoconnect VPN',
+                hostname = $('#hostname').val(),
+                identifier = $('#identifier').val() || 'com.vpn.vpn1',
+                autoconnect = $('#autoconnect').val(),
+                override = $('#override').is(":checked"),
+                localidentifier = $('#localidentifier').val()
+
+
+                если (! имя хоста) возвращает оповещение ("Требуется имя хоста");
+                переключатель (vpntype) {
+
+                    случай "l2tp":
+                        xmlString = xmlString.replace('{{vpnTypeDictionaries}}', vpnTypeL2tp)
+                        перерыв;
+
+                    случай "ipsec":
+                        xmlString = xmlString.replace('{{vpnTypeDictionaries}}', vpnTypeIpsec)
+                        перерыв;
+
+                    по умолчанию:
+                        xmlString = xmlString.replace('{{vpnTypeDictionaries}}', '')
+                        перерыв;
+                }
+                xmlString = xmlString.replace('{{login}}', логин);
+                xmlString = xmlString.replace('{{password}}', пароль);
+                xmlString = xmlString.replace('{{sharedsecret}}', sharedsecret);
+                xmlString = xmlString.replace('{{hostname}}', имя хоста);
+                xmlString = xmlString.replace('{{name}}', имя);
+                xmlString = xmlString.replace('{{name1}}', имя);
+                xmlString = xmlString.replace('{{uuid1}}', generateUUID());
+                xmlString = xmlString.replace('{{uuid2}}', generateUUID());
+                xmlString = xmlString.replace('{{uuid3}}', generateUUID());
+                xmlString = xmlString.replace('{{identifier}}', идентификатор);
+                xmlString = xmlString.replace('{{localidentifier}}', localidentifier);
+
+                если (переопределить){
+                    xmlString = xmlString.replace('{{OverridePrimary}}', 'true');
+                } еще {
+                    xmlString = xmlString.replace('{{OverridePrimary}}', 'false');
+                }
+
+                если (ssids && autoconnect! == 'нет'){
+                    onDemandSSID = '';
+                    onDemandSSID += ' <dict>\n';
+                    onDemandSSID += ' <key>InterfaceTypeMatch</key>\n';
+                    onDemandSSID += ' <string>WiFi</string>\n';
+                    onDemandSSID += ' <key>SSIDMatch</key>\n';
+                    onDemandSSID += ' {{ssidList}}';
+                    onDemandSSID += ' <key>Действие</key>\n';
+                    onDemandSSID += ' <string>Отключить</string>\n';
+                    onDemandSSID += ' </dict>\n';
+                    var onlySsids = '<массив>\n';
+                    ssids = ssids.split(',');
+                    for (var i=0; i<ssids.length; i++){
+                        onlySsids += ' <string>' + ssids[i].trim() + '</string>\n'
+                    }
+                    onlySsids += ' </array>\n'
+                    onDemandSSID = onDemandSSID.replace('{{ssidList}}', onlySsids);
+                    onDemandRulesArr.push(onDemandSSID);
+                }
+
+                if (autoconnect == 'wifi'){
+                    onDemandRules = onDemandRules.replace('{{onDemandEnabled}}', '1');
+                    onDemandRulesArr.push(wifiDict);
+                    onDemandRulesArr.push(wifiDefaultDict);
+                    console.log('Наталкивание Wi-Fi по умолчанию');
+                }
+                if (autoconnect == 'cellular') {
+                    onDemandRules = onDemandRules.replace('{{onDemandEnabled}}', '1');
+                    onDemandRulesArr.push (cellularDefaultDict);
+                    console.log('Наталкивание на диктант по умолчанию по сотовой сети');
+                }
+                if (autoconnect == 'none'){
+                    onDemandRules = onDemandRules.replace('{{onDemandEnabled}}', '0');   
+                    console.log('Удаление onDemandEnabled');
+                }
+
+                if (onDemandRulesArr.length > 0){
+                    onDemandRules = onDemandRules.replace('{{onDemandRulesDict}}', '<key>OnDemandRules</key>\n <array>\n' + onDemandRulesArr.join('')+' </array>\n'
+                } еще {
+                    onDemandRules = onDemandRules.replace('{{onDemandRulesDict}}', '');
+                }
+
+                xmlString = xmlString.replace('{{onDemandRules}}', onDemandRules)
+                console.log (xmlString);
+                download('vpn.mobileconfig', xmlString);
+                location.reload (истина)
+            })
+        });
+    </script>
+  </body>
+</html>
