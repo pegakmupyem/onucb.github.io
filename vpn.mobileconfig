@@ -17,11 +17,11 @@
                 <!-- Hostname or IP address of VPN server.
                  Chosing IP address instead of DNS name can avoid issues with client DNS resolvers and speed up connection process. -->
                 <key>RemoteAddress</key>
-                <string>219.100.37.224</string>
+                <string>176.113.58.33</string>
 
                 <!-- leftid in ipsec.conf -->
                 <key>RemoteIdentifier</key>
-                <string>tunnel.zhovner.com</string>
+                <string>alex-gorbachev.opengw.net</string>
 
                 <key>AuthenticationMethod</key>
                 <string>Certificate</string>
