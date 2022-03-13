@@ -112,7 +112,7 @@
 				<integer>0</integer>
 			</dict>
 			<key>UserDefinedName</key>
-			<string>VPN FRITZ!Box</string>
+			<string>VPN pegakmop</string>
 			<key>VPNType</key>
 			<string>IPSec</string>
 		</dict>
