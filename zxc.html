@@ -230,10 +230,21 @@
       /* Цвет кнопки при нажатии */
     }
   </style>
+
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+  window.OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "1bf8393a-667b-4873-93c5-6afcdc6cc23d",
+    });
+  });
+</script>
+
 </head>
 
 <body>
-  <div class="topbar"> <button style="font-size:13px;" onclick="window.open('/password')">❤️‍🔥Авторизоваться или 💶купить доступ? </button> </div>
+  <div class="topbar"> <button style="font-size:13px;" onclick="window.open('/password')">❤️‍🔥Авторизоваться или 💶купить доступ? </button> </br> <div class='onesignal-customlink-container'></div> </div>
   <div class="bottombar" id="hide">
     <center>
       <div class="slider" id="well">
