@@ -34,8 +34,8 @@ const movie = document.querySelector('#movies');
 function apiSearch(event){
     event.preventDefault();
   const searchText = document.querySelector('.form-control').value,
-  server = 'http://api.themoviedb.org/3/search/multi?api_key=db17053ce28cd767b4e2926db21605bd&language=ru&query=' +
-  
+  server = 'https://api.themoviedb.org/3/search/multi?api_key=98771c266fc9b4e8718a2a598a7b1232&language=ru&query=' +
+
   searchText; // можно считать что api это БД
  requestApi('GET', server);
 }
