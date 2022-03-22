@@ -119,7 +119,7 @@ function izbr(){
           crossDomain: true,
           url: 'https://kinopoiskapiunofficial.tech/api/v2.2/films/'+data[i],
           type: 'GET',
-          headers: {'X-API-KEY':'1281ba0d-593b-4f3e-8b14-2b63e66ae00a'},
+          headers: {'X-API-KEY':'1c547473-0385-454b-a351-8c41f27ea5fd'},
           success: function(response){
                    $('.items').append('<li class="item" style="margin-bottom: 1rem">    <a class="link" href="/kino?id='+response.kinopoiskId+'&title='+response.nameRu+' ('+response.year+')" target="_blank" title="'+response.nameRu+' ('+response.year+')">        <div class="cover-wrap">          <div class="cover js-b-lazy fadeIn animated" style="background-image: url('+response.posterUrlPreview+');"></div></div>     <div class="description">     <h3 class="title_izb">'+response.nameRu+'</h3>      <span class="desc">     <span class="rating">'+response.ratingKinopoisk+'</span>    <span class="year">'+response.year+'</span></span></div></a></li>');
           }
