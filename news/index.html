@@ -113,7 +113,7 @@ number = (arr[month]);
 	$.ajax({
 			 		async: true,
 			 		crossDomain: true,
-					url: 'https://kinopoiskapiunofficial.tech/api/v2.2/films?order=NUM_VOTE&type=ALL&ratingFrom=0&ratingTo=10&yearFrom=2022&yearTo=2022&page=1',
+					url: 'https://kinopoiskapiunofficial.tech/api/v2.1/films/releases?year=2022&month=number&page=1',
 					type: 'GET',
 			 		headers: {'X-API-KEY':'1281ba0d-593b-4f3e-8b14-2b63e66ae00a'},
 					success: function(response){
