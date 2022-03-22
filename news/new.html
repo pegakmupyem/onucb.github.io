@@ -109,7 +109,25 @@ var arr = [
   "NOVEMBER",
   "DECEMBER"
 ];
-number = (arr[month+1]);
+number = (arr[month]);
+numberm = (arr[month-1]);
+numberp = (arr[month+1]);
+	$.ajax({
+			 		async: true,
+			 		crossDomain: true,
+					url: 'https://kinopoiskapiunofficial.tech/api/v2.1/films/releases?year=2022&month='+numberm,
+					type: 'GET',
+			 		headers: {'X-API-KEY':'1281ba0d-593b-4f3e-8b14-2b63e66ae00a'},
+					success: function(response){
+	         				var a = response.releases;
+			 				var index, len;
+			 				for (index = 0, len = a.length; index < len; ++index) {
+				 				var item = a[index];
+					 				 $('.items').append('<li class="item" style="margin-bottom: 1rem">    <a class="link" href="/kino?id='+item.filmId+'&title='+item.nameRu+' ('+item.year+')" target="_blank" title="'+item.nameRu+' ('+item.year+')">        <div class="cover-wrap">          <div class="cover js-b-lazy fadeIn animated" style="background-image: url('+item.posterUrlPreview+');"></div></div>     <div class="description">     <h3 class="title">'+item.nameRu+'</h3>      <span class="desc">     <span class="rating">'+item.rating+'</span>    <span class="year">'+item.releaseDate+'</span></span></div></a></li>');
+							}
+					}
+	});
+	 
 	$.ajax({
 			 		async: true,
 			 		crossDomain: true,
@@ -125,9 +143,23 @@ number = (arr[month+1]);
 							}
 					}
 	});
-	 
-	
-	
+
+	$.ajax({
+			 		async: true,
+			 		crossDomain: true,
+					url: 'https://kinopoiskapiunofficial.tech/api/v2.1/films/releases?year=2022&month='+numberp,
+					type: 'GET',
+			 		headers: {'X-API-KEY':'1281ba0d-593b-4f3e-8b14-2b63e66ae00a'},
+					success: function(response){
+	         				var a = response.releases;
+			 				var index, len;
+			 				for (index = 0, len = a.length; index < len; ++index) {
+				 				var item = a[index];
+					 				 $('.items').append('<li class="item" style="margin-bottom: 1rem">    <a class="link" href="/kino?id='+item.filmId+'&title='+item.nameRu+' ('+item.year+')" target="_blank" title="'+item.nameRu+' ('+item.year+')">        <div class="cover-wrap">          <div class="cover js-b-lazy fadeIn animated" style="background-image: url('+item.posterUrlPreview+');"></div></div>     <div class="description">     <h3 class="title">'+item.nameRu+'</h3>      <span class="desc">     <span class="rating">'+item.rating+'</span>    <span class="year">'+item.releaseDate+'</span></span></div></a></li>');
+							}
+					}
+	});	
+
 function search(){
 	var text = document.getElementById('text').value;
 	$.ajax({
