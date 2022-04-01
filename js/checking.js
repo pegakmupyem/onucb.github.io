@@ -10,7 +10,7 @@ $(document).ready(function(){
                        localStorage.setItem('pass', JSON.stringify(hash.acthash));
                        window.open('/search')
                      } else {
-                       alert('📵НЕправильный Пароль‼️');
+                       alert('📵 НЕправильный Пароль‼️');
                        localStorage.removeItem('pass');
                        localStorage.setItem('pass', JSON.stringify("noLLIeJl_Haxyū"));
                        window.open('/password')
