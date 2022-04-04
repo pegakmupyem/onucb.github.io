@@ -10,7 +10,7 @@ $(document).ready(function(){
                        localStorage.setItem('pass', JSON.stringify(hash.acthash));
                        window.open('/search')
                      } else {
-                       alert('📵 НЕправильный Пароль‼️ Пароль не должен содержать пробелов‼️');
+                       alert('📵 НЕправильный Пароль‼️ Пароль ДОЛЖЕН быть БЕЗ пробелов‼️');
                        localStorage.removeItem('pass');
                        localStorage.setItem('pass', JSON.stringify("noLLIeJl_Haxyū"));
                        window.open('/password')
