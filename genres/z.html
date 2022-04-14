@@ -226,7 +226,7 @@ if ('serviceWorker' in navigator) {
           <option value="ALL"> Фильмы и сериалы </option>
         </select>
 
-        <select id='genre' onchange="JILaHP=this.value">
+        <select id='genre' onchange="genres=this.value">
           <option value="?"> Выберите Жанр: </option>
           <option value="?genres=1&"> Триллер </option>
           <option value="?genres=2&"> Драмма </option>
@@ -300,7 +300,7 @@ if ('serviceWorker' in navigator) {
     </div>
 	</div>
 <script>
-  JILaHP=?;
+  genres=?;
   cmpaHa=?;
   totalPages=1;
   pg=1;
@@ -354,7 +354,7 @@ function search(){
 	$.ajax({
 			 		async: true,
 			 		crossDomain: true,
-					url: 'https://kinopoiskapiunofficial.tech/api/v2.2/films' + JILaHP + 'order=' + sorting + '&type=' + kinofilms + '&ratingFrom=' + firstrating + '&ratingTo=' + secondrating + '&yearFrom=' + firstyear + '&yearTo=' + secondyear + '&keyword=' + text + '&page=' + pg,
+					url: 'https://kinopoiskapiunofficial.tech/api/v2.2/films' + genres + 'order=' + sorting + '&type=' + kinofilms + '&ratingFrom=' + firstrating + '&ratingTo=' + secondrating + '&yearFrom=' + firstyear + '&yearTo=' + secondyear + '&keyword=' + text + '&page=' + pg,
 					type: 'GET',
 			 		headers: {'X-API-KEY':'1c547473-0385-454b-a351-8c41f27ea5fd'},
 					success: function(response){
@@ -378,7 +378,7 @@ function search(){
   	$.ajax({
   			 		async: true,
   			 		crossDomain: true,
-  					url: 'https://kinopoiskapiunofficial.tech/api/v2.2/films' + JILaHP + 'order=' + sorting + '&type=' + kinofilms + '&ratingFrom=' + firstrating + '&ratingTo=' + secondrating + '&yearFrom=' + firstyear + '&yearTo=' + secondyear + '&keyword=' + text + '&page=' + pg,
+  					url: 'https://kinopoiskapiunofficial.tech/api/v2.2/films' + genres + 'order=' + sorting + '&type=' + kinofilms + '&ratingFrom=' + firstrating + '&ratingTo=' + secondrating + '&yearFrom=' + firstyear + '&yearTo=' + secondyear + '&keyword=' + text + '&page=' + pg,
   					type: 'GET',
   			 		headers: {'X-API-KEY':'1c547473-0385-454b-a351-8c41f27ea5fd'},
   					success: function(response){
