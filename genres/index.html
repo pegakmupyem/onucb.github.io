@@ -227,7 +227,7 @@ if ('serviceWorker' in navigator) {
         </select>
 
         <select id='genre' onchange="genres=this.value">
-          <option value="0"> Выберите Жанр: </option>
+          <option value=""> Выберите Жанр: </option>
           <option value="1"> Триллер </option>
           <option value="2"> Драмма </option>
           <option value="3"> Криминал </option>
@@ -264,7 +264,7 @@ if ('serviceWorker' in navigator) {
         </select>
 
         <select id='countrl' onchange="countries=this.value">
-          <option value="0"> Выберите Страну: </option>
+          <option value=""> Выберите Страну: </option>
           <option value="33"> СССР </option>
           <option value="34"> Россия </option>
           <option value="106"> Украина </option>
@@ -543,8 +543,8 @@ if ('serviceWorker' in navigator) {
     </div>
 	</div>
 <script>
-  genres=25;
-  countries=54;
+  genres=0;
+  countries=0;
   totalPages=1;
   pg=1;
   sorting="NUM_VOTE";
