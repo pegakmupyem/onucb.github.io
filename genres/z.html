@@ -226,40 +226,40 @@ if ('serviceWorker' in navigator) {
           <option value="ALL"> Фильмы и сериалы </option>
         </select>
 
-        <select id='genre' onchange="genres=this.value">
-          <option value="25"> Выберите Жанр: </option>
-          <option value="1"> Триллер </option>
-          <option value="2"> Драмма </option>
-          <option value="3"> Криминал </option>
-          <option value="4"> Мелодрама </option>
-          <option value="5"> Детектив </option>
-          <option value="6"> Фантастика </option>
-          <option value="7"> Приключения </option>
-          <option value="8"> Биография </option>
-          <option value="9"> Фильм-Нуар </option>
-          <option value="10"> Вестерн </option>
-          <option value="11"> Боевик </option>
-          <option value="12"> Фэнтези </option>
-          <option value="13"> Комедия </option>
-          <option value="14"> Военный </option>
-          <option value="15"> История </option>
-          <option value="16"> Музыка </option>
-          <option value="17"> Ужасы </option>
-          <option value="18"> Мультфильм </option>
-          <option value="19"> Семейный </option>
-          <option value="20"> Мюзикл </option>
-          <option value="21"> Спорт </option>
-          <option value="22"> Документальный </option>
-          <option value="23"> Короткометражка </option>
-          <option value="24"> Аниме </option>
-          <option value="26"> Новости </option>
-          <option value="27"> Концерт </option>
-          <option value="28"> Для Взрослых </option>
-          <option value="29"> Церемония </option>
-          <option value="30"> Реальное ТВ </option>
-          <option value="31"> Игра </option>
-          <option value="32"> Ток-Шоу </option>
-          <option value="33"> Детский </option>
+        <select id='genre' onchange="JILaHP=this.value">
+          <option value="?"> Выберите Жанр: </option>
+          <option value="?genres=1&"> Триллер </option>
+          <option value="?genres=2&"> Драмма </option>
+          <option value="?genres=3&"> Криминал </option>
+          <option value="?genres=4"> Мелодрама </option>
+          <option value="?genres=5"> Детектив </option>
+          <option value="?genres=6"> Фантастика </option>
+          <option value="?genres=7"> Приключения </option>
+          <option value="?genres=8"> Биография </option>
+          <option value="?genres=9"> Фильм-Нуар </option>
+          <option value="?genres=10"> Вестерн </option>
+          <option value="?genres=11"> Боевик </option>
+          <option value="?genres=12"> Фэнтези </option>
+          <option value="?genres=13"> Комедия </option>
+          <option value="?genres=14"> Военный </option>
+          <option value="?genres=15"> История </option>
+          <option value="?genres=16"> Музыка </option>
+          <option value="?genres=17"> Ужасы </option>
+          <option value="?genres=18"> Мультфильм </option>
+          <option value="?genres=19"> Семейный </option>
+          <option value="?genres=20"> Мюзикл </option>
+          <option value="?genres=21"> Спорт </option>
+          <option value="?genres=22"> Документальный </option>
+          <option value="?genres=23"> Короткометражка </option>
+          <option value="?genres=24"> Аниме </option>
+          <option value="?genres=26"> Новости </option>
+          <option value="?genres=27"> Концерт </option>
+          <option value="?genres=28"> Для Взрослых </option>
+          <option value="?genres=29"> Церемония </option>
+          <option value="?genres=30"> Реальное ТВ </option>
+          <option value="?genres=31"> Игра </option>
+          <option value="?genres=32"> Ток-Шоу </option>
+          <option value="?genres=33"> Детский </option>
         </select>
 </br>
         <select id='pages' onchange="pg=this.value; search2()">
@@ -300,8 +300,8 @@ if ('serviceWorker' in navigator) {
     </div>
 	</div>
 <script>
-  genres=25;
-  countries=54;
+  JILaHP=?;
+  cmpaHa=?;
   totalPages=1;
   pg=1;
   sorting="NUM_VOTE";
@@ -354,7 +354,7 @@ function search(){
 	$.ajax({
 			 		async: true,
 			 		crossDomain: true,
-					url: 'https://kinopoiskapiunofficial.tech/api/v2.2/films?genres=' + genres + '&order=' + sorting + '&type=' + kinofilms + '&ratingFrom=' + firstrating + '&ratingTo=' + secondrating + '&yearFrom=' + firstyear + '&yearTo=' + secondyear + '&keyword=' + text + '&page=' + pg,
+					url: 'https://kinopoiskapiunofficial.tech/api/v2.2/films' + JILaHP + 'order=' + sorting + '&type=' + kinofilms + '&ratingFrom=' + firstrating + '&ratingTo=' + secondrating + '&yearFrom=' + firstyear + '&yearTo=' + secondyear + '&keyword=' + text + '&page=' + pg,
 					type: 'GET',
 			 		headers: {'X-API-KEY':'1c547473-0385-454b-a351-8c41f27ea5fd'},
 					success: function(response){
@@ -378,7 +378,7 @@ function search(){
   	$.ajax({
   			 		async: true,
   			 		crossDomain: true,
-  					url: 'https://kinopoiskapiunofficial.tech/api/v2.2/films?genres=' + genres + '&order=' + sorting + '&type=' + kinofilms + '&ratingFrom=' + firstrating + '&ratingTo=' + secondrating + '&yearFrom=' + firstyear + '&yearTo=' + secondyear + '&keyword=' + text + '&page=' + pg,
+  					url: 'https://kinopoiskapiunofficial.tech/api/v2.2/films' + JILaHP + 'order=' + sorting + '&type=' + kinofilms + '&ratingFrom=' + firstrating + '&ratingTo=' + secondrating + '&yearFrom=' + firstyear + '&yearTo=' + secondyear + '&keyword=' + text + '&page=' + pg,
   					type: 'GET',
   			 		headers: {'X-API-KEY':'1c547473-0385-454b-a351-8c41f27ea5fd'},
   					success: function(response){
