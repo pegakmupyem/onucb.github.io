@@ -636,7 +636,7 @@ function search(){
   	$.ajax({
   			 		async: true,
   			 		crossDomain: true,
-  					url: 'https://kinopoiskapiunofficial.tech/api/v2.2/films?countries=&genres=25&order=' + sorting + '&type=' + kinofilms + '&ratingFrom=' + firstrating + '&ratingTo=' + secondrating + '&yearFrom=' + firstyear + '&yearTo=' + secondyear + '&keyword=' + text + '&page=' + pg,
+  					url: 'https://kinopoiskapiunofficial.tech/api/v2.2/films?countries=' + countries + '&genres=' + genres + '&order=' + sorting + '&type=' + kinofilms + '&ratingFrom=' + firstrating + '&ratingTo=' + secondrating + '&yearFrom=' + firstyear + '&yearTo=' + secondyear + '&keyword=' + text + '&page=' + pg,
   					type: 'GET',
   			 		headers: {'X-API-KEY':'1c547473-0385-454b-a351-8c41f27ea5fd'},
   					success: function(response){
