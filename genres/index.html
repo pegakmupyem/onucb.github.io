@@ -225,6 +225,21 @@ if ('serviceWorker' in navigator) {
           <option value="TV_SHOW"> Только сериалы </option>
           <option value="ALL"> Фильмы и сериалы </option>
         </select>
+
+        <select id='genre' onchange="genres=this.value">
+          <option value=""> Выберите Жанр: </option>
+          <option value="FILM"> Только фильмы </option>
+          <option value="TV_SHOW"> Только сериалы </option>
+          <option value="ALL"> Фильмы и сериалы </option>
+        </select>
+
+        <select id='countrl' onchange="countries=this.value">
+          <option value=""> Выберите Страну: </option>
+          <option value="FILM"> Только фильмы </option>
+          <option value="TV_SHOW"> Только сериалы </option>
+          <option value="ALL"> Фильмы и сериалы </option>
+        </select>
+
         <select id='pages' onchange="pg=this.value; search2()">
           <option value="1"> 1 страница </option>
         </select>
