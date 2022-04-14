@@ -227,7 +227,7 @@ if ('serviceWorker' in navigator) {
         </select>
 
         <select id='genre' onchange="genres=this.value">
-          <option value="0"> Выберите Жанр: </option>
+          <option value="25"> Выберите Жанр: </option>
           <option value="1"> Триллер </option>
           <option value="2"> Драмма </option>
           <option value="3"> Криминал </option>
@@ -252,7 +252,7 @@ if ('serviceWorker' in navigator) {
           <option value="22"> Документальный </option>
           <option value="23"> Короткометражка </option>
           <option value="24"> Аниме </option>
-          <option value="25">  </option>
+          
           <option value="26"> Новости </option>
           <option value="27"> Концерт </option>
           <option value="28"> Для Взрослых </option>
@@ -262,7 +262,7 @@ if ('serviceWorker' in navigator) {
           <option value="32"> Ток-Шоу </option>
           <option value="33"> Детский </option>
         </select>
-
+<script>
         <select id='countrl' onchange="countries=this.value">
           <option value="0"> Выберите Страну: </option>
           <option value="33"> СССР </option>
@@ -504,6 +504,7 @@ if ('serviceWorker' in navigator) {
           <option value="241"> Северная Македония </option>
           <option value="242"> Виргинские острова (Великобритания) </option>
         </select>
+</script>
 </br>
         <select id='pages' onchange="pg=this.value; search2()">
           <option value="1"> 1 страница </option>
@@ -543,8 +544,8 @@ if ('serviceWorker' in navigator) {
     </div>
 	</div>
 <script>
-  genres=0;
-  countries=0;
+  genres=25;
+  countries=54;
   totalPages=1;
   pg=1;
   sorting="NUM_VOTE";
@@ -597,7 +598,7 @@ function search(){
 	$.ajax({
 			 		async: true,
 			 		crossDomain: true,
-					url: 'https://kinopoiskapiunofficial.tech/api/v2.2/films?countries=' + countries + '&genres=' + genres + '&order=' + sorting + '&type=' + kinofilms + '&ratingFrom=' + firstrating + '&ratingTo=' + secondrating + '&yearFrom=' + firstyear + '&yearTo=' + secondyear + '&keyword=' + text + '&page=' + pg,
+					url: 'https://kinopoiskapiunofficial.tech/api/v2.2/films?genres=' + genres + '&order=' + sorting + '&type=' + kinofilms + '&ratingFrom=' + firstrating + '&ratingTo=' + secondrating + '&yearFrom=' + firstyear + '&yearTo=' + secondyear + '&keyword=' + text + '&page=' + pg,
 					type: 'GET',
 			 		headers: {'X-API-KEY':'1c547473-0385-454b-a351-8c41f27ea5fd'},
 					success: function(response){
@@ -621,7 +622,7 @@ function search(){
   	$.ajax({
   			 		async: true,
   			 		crossDomain: true,
-  					url: 'https://kinopoiskapiunofficial.tech/api/v2.2/films?countries=' + countries + '&genres=' + genres + '&order=' + sorting + '&type=' + kinofilms + '&ratingFrom=' + firstrating + '&ratingTo=' + secondrating + '&yearFrom=' + firstyear + '&yearTo=' + secondyear + '&keyword=' + text + '&page=' + pg,
+  					url: 'https://kinopoiskapiunofficial.tech/api/v2.2/films?genres=' + genres + '&order=' + sorting + '&type=' + kinofilms + '&ratingFrom=' + firstrating + '&ratingTo=' + secondrating + '&yearFrom=' + firstyear + '&yearTo=' + secondyear + '&keyword=' + text + '&page=' + pg,
   					type: 'GET',
   			 		headers: {'X-API-KEY':'1c547473-0385-454b-a351-8c41f27ea5fd'},
   					success: function(response){
