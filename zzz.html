@@ -183,7 +183,7 @@
         };
  
         function showFiles() {
-            fetch('/get_files/test.php?type=tv-series&kpid=' + kpid)
+            fetch('//kinoplay.ahmedov.ml/kino/test.php?type=tv-series&kpid=' + kpid)
                 .then(res => res.text())
                 .then(function(data) {
                     Contentimg.innerHTML = '';
