@@ -5,12 +5,15 @@
 <title>@PiperPiedBot</title>
 </head>
 <body>
-<div data-kinopoisk="" data-resize="1"  data-tv="1" id="kinobd"></div>
+
+<video id="kinobd" data-resize="1"  data-tv="1" data-kinopoisk="" controls> 
+    <source src="//kinobd.ru/js/player_.js" type="video/mp4">
+</video>
 
 <script>
 		const kinobd = document.getElementById('kinobd');
 		const id = window.location.hash.substring(1);
-		kinobd.setAttribute('data-kinopoisk', id);
+		yohoho.setAttribute('data-kinopoisk', id);
 </script>
 
 <script src="//kinobd.ru/js/player_.js"></script>
