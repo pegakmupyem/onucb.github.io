@@ -3,6 +3,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=100%, height=50%, initial-scale=1.0">
 <title>@PiperPiedBot</title>
+
+<style type="text/css">
+body>div:first-child:not(#puzadpn){display:none!important;}
+#nativeroll_video_cont{display:none!important;}
+</style>
+
 </head>
 <body>
 
@@ -14,6 +20,17 @@
 		const kinobd = document.getElementById('kinobd');
 		const id = window.location.hash.substring(1);
 		kinobd.setAttribute('data-kinopoisk', id);
+</script>
+
+<script type="text/javascript">
+(function(){
+ var o=document.getElementsByTagName('div')[0];
+ if(o&&o.id&&o.style&&o.id!='puzadpn'){o.innerHTML='';o.parentNode.removeChild(o);};
+ 
+ var vc=document.getElementById("nativeroll_video_cont");
+ if(vc)
+  vc.innerHTML='';
+})();
 </script>
 
 <script src="//kinobd.ru/js/player_.js"></script>
