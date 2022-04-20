@@ -141,7 +141,7 @@
         function showPlayer(number) {
             if (number == 0) {
                 Contentimg.innerHTML = '';
-                Contentimg.innerHTML = '<iframe class="iframe" src="/trailer.html#' + title + '"></iframe>';
+                Contentimg.innerHTML = '<iframe class="iframe" src="//pleer.video/' + kpid + '"></iframe>';
                 israting.innerHTML = '';
                 israting.innerHTML = 'YouTube | Трейлер';
             } else {
@@ -160,7 +160,7 @@
         };
  
         function showFiles() {
-            fetch('//kinoplay.ahmedov.ml/kino/test.php?type=tv-series&kpid=' + kpid)
+            fetch('/test.php?type=' + type + '&kpid=' + kpid)
                 .then(res => res.text())
                 .then(function(data) {
                     Contentimg.innerHTML = '';
