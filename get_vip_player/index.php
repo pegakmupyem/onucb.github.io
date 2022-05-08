@@ -16,7 +16,7 @@
             background-color: black;
         }
  
-        #player {
+         player {
             width: 100%;
             height: 100%;
         }
