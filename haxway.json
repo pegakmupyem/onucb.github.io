@@ -1,17 +1,13 @@
 {
   "name": "HaxWay",
   "short_name": "HaxWay",
-  "description": "приложения",
-  "start_url": "/css/",
-  "scope": "/",
-  "theme_color": "#000000",
+  "icons": [{
+        "src": "media/logo.png",
+        "sizes": "180x180",
+        "type": "image/png"
+      }],
+  "start_url": "/css/index.html?homescreen=1",
+  "display": "standalone",
   "background_color": "#000000",
-  "icons": [
-    {
-      "src": "\/logo.png",
-      "sizes": "180x180",
-      "type": "image\/png",
-      "purpose": "any maskable"
-    }
-  ]
+  "theme_color": "#000000"
 }
