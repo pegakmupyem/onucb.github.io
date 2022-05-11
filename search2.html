@@ -64,14 +64,13 @@
 		<input type="search" id="text" style="width: 70%; background: var(--bg-color); border: none; font-size: 8pt; color: var(--light-text-color); -webkit-border-radius: 15px; -moz-border-radius: 15px; border-radius: 15px;border-left: 0.5px var(--light-text-color) solid; border-right: 0.5px var(--light-text-color) solid; border-top: 0.5px var(--light-text-color) solid; border-bottom: 0.5px var(--light-text-color) solid; height: 25px; margin: 5px; padding-left: 10px;" placeholder="Введите название фильма или сериала и нажмите Enter или кнопку Искать"> 
 		<input type="submit" style="background: var(--bg-color); font-size: 10pt; color: var(--light-text-color);border-radius: 15px; border-left: 0.5px var(--light-text-color) solid; border-right: 0.5px var(--light-text-color) solid; border-top: 0.5px var(--light-text-color) solid; border-bottom: 0.5px var(--light-text-color) solid;cursor: pointer;width: 25%; height: 25px;" onclick="search();" value="Искать">
    	</div>
+<select id='yearfrom' onchange="firstyear=this.value">
+  <option value="1000">Выберите от какого года</option>
+</select>
 
-        <select id='yearfrom' onchange="firstyear=this.value">
-          <option value="1000">Выберите от какого года</option>
-        </select>
-
-        <select id='yearto' onchange="secondyear=this.value">
-          <option value="3000">Выберите до какого года</option>
-        </select>
+<select id='yearto' onchange="secondyear=this.value">
+  <option value="3000">Выберите до какого года</option>
+</select>
         <select id='ratingback' onchange="firstrating=this.value">
           <option value="0"> От 0 рейтинг </option>
           <option value="1"> От 1 рейтинг </option>
@@ -110,7 +109,7 @@
         <select id='pages' onchange="pg=this.value; search2()">
           <option value="1"> 1 страница </option>
         </select>
-        </br>
+</br> 
 
 	<div class="fadeInElement">
 	<div class="top-gallery-item">
