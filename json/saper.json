@@ -2,7 +2,7 @@
   "name": "💥 Сапёр",
   "short_name": "💥 Сапёр",
   "icons": [{
-        "src": "media/logo.png",
+        "src": "media/saper.png",
         "sizes": "180x180",
         "type": "image/png"
       }],
