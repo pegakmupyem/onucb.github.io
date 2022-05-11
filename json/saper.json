@@ -1,0 +1,13 @@
+{
+  "name": "💥 Сапёр",
+  "short_name": "💥 Сапёр",
+  "icons": [{
+        "src": "media/logo.png",
+        "sizes": "180x180",
+        "type": "image/png"
+      }],
+  "start_url": "/saper?homescreen=1",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000"
+}
