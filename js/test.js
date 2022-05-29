@@ -3,7 +3,15 @@ window.hash = {
 };
 var localValue = localStorage.getItem('pass');
 console.log(localValue);
+
+alert(localValue);
+
+alert(localStorage.getItem('pass'));
+
 var txt = localValue;
+
+alert(txt);
+
 const input = document.getElementById('txt');
 $(document).ready(function(){
                  $("#txt").keypress(function(e){
