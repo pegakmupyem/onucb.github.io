@@ -29,15 +29,24 @@
 
             </div>
 			<script>
+window.hash = {
+  acthash: "f064df9af70e9fcbdae899bc4b626924"
+};
 				var localValue = localStorage.getItem('pass');
                                 console.log(localValue);
 			setTimeout(function(){
 				alert(localValue);
 			},1500)
 			var get = function(){
-			window.location.href = 'https://cdn.adguard.com/public/Dns/adguard-dns.mobileconfig';
+			var test = localStorage.getItem('pass');
+                                console.log(test);
 			setTimeout(function(){
-				window.location.href = 'https://ios-tool.com/mlq.mobileprovision';
+				if (test==hash.acthash) {
+                      alert('равно');
+                      
+                     } else {
+                       alert('📵 НЕправильный Пароль‼️ Пароль ДОЛЖЕН быть БЕЗ пробелов‼️');
+                      
 			},1500)
             }
 			</script>
