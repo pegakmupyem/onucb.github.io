@@ -14,7 +14,8 @@ console.log(localValue);
 alert(localValue + "localValue");
 if (localValue == check) {
   alert("верно");
-  window.location.href = '/genres';
+  url = window.location.host + '/series/' + window.location.search;
+  window.location.href = 'url';
 } else {
   alert("ложь");
   window.location.href = '/password';
