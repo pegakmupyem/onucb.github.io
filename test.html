@@ -32,10 +32,16 @@
 window.hash = {
   acthash: "f064df9af70e9fcbdae899bc4b626924"
 };
-				var localValue = localStorage.getItem('pass');
-                                console.log(localValue);
+
+var localValue = localStorage.getItem('pass');
+console.log(localValue);
+
 			setTimeout(function(){
-				alert(localValue);
+				if (localValue == window.hash) {
+  alert( 'Да всё верно!' );
+} else {
+  alert( 'А вот и неправильно!' ); // любое значение, кроме 2015
+}
 			},1500)
 			var get = function(){
 			var test = localStorage.getItem('pass');
