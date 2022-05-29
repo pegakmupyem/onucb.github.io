@@ -37,8 +37,8 @@ if (localValue == f064df9af70e9fcbdae899bc4b626924) {
 } else {
   alert( 'А вот и неправильно!' ); // любое значение, кроме 2015
 }
-			var get = function(){
-			localStorage.setItem('check', JSON.stringify("f064df9af70e9fcbdae899bc4b626924"));
+var get = function(){
+localStorage.setItem('check', JSON.stringify("f064df9af70e9fcbdae899bc4b626924"));
 var check = localStorage.getItem("check");
 console.log(check);
 alert(check);
@@ -50,9 +50,7 @@ if (localValue == check) {
 } else {
   alert("ложь");
 }
-
-			setTimeout(function(){
-				
+setTimeout(function(){		
   alert(chech);
   alert(localValue);
 },1500)
