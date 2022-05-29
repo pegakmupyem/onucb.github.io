@@ -38,16 +38,16 @@ if (localValue == f064df9af70e9fcbdae899bc4b626924) {
   alert( 'А вот и неправильно!' ); // любое значение, кроме 2015
 }
 			var get = function(){
-			var test = localStorage.getItem('pass');
-                                console.log(test);
+			var localValue = localStorage.getItem('pass');
+console.log(localValue);
+alert(localValue);
 			setTimeout(function(){
-				if (test==hash.acthash) {
-                      alert('равно');
-                      
-                     } else {
-                       alert('📵 НЕправильный Пароль‼️ Пароль ДОЛЖЕН быть БЕЗ пробелов‼️');
-                      
-			},1500)
+				if (localValue == f064df9af70e9fcbdae899bc4b626924) {
+  alert( 'Да вы знаток!' );
+} else {
+  alert( 'А вот и неправильно!' ); // любое значение, кроме 2015
+}
+},1500)
             }
 			</script>
 </body>
