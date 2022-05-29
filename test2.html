@@ -14,7 +14,7 @@ console.log(localValue);
 alert(localValue + "localValue");
 if (localValue == check) {
   alert("верно");
-  url = window.location.host + '/series/' + window.location.search;
+  url = '/series/' + window.location.search;
   window.location.href = url;
 } else {
   alert("ложь");
