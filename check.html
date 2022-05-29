@@ -1,0 +1,26 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>AdGuard DNS iOS 14+</title>
+</head>		
+<body>
+<script>
+localStorage.setItem('check', JSON.stringify("f064df9af70e9fcbdae899bc4b626924"));
+var check = localStorage.getItem("check");
+console.log(check);
+alert(check + "check");
+var localValue = localStorage.getItem("pass");
+console.log(localValue);
+alert(localValue + "localValue");
+if (localValue == check) {
+  alert("верно");
+  url = '/kino/premium' + window.location.search;
+  window.location.href = url;
+} else {
+  alert("ложь");
+  url = '/kino/basic' + window.location.search;
+  window.location.href = url;
+}
+</script>
+</body>
+</html> 
