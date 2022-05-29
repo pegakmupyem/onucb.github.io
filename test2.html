@@ -12,11 +12,10 @@ console.log(check);
 var localValue = localStorage.getItem("pass");
 console.log(localValue);
 if (localValue == check) {
-  alert("подписка активна");
   url = '/kino/done' + window.location.search;
   window.location.href = url;
 } else {
-  alert("купите подписку для продолжения просмотра");
+  alert("Ваша подписка истекла, оплатите для продолжения просмотра");
   url = '/kino/fail' + window.location.search;
   window.location.href = url;
 }
