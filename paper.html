@@ -80,61 +80,13 @@
     </div>
 	</div>
 <script>
-	$.ajax({
-			 		async: true,
-			 		crossDomain: true,
-					url: 'https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_100_POPULAR_FILMS&page=1',
-					type: 'GET',
-			 		headers: {'X-API-KEY':'1c547473-0385-454b-a351-8c41f27ea5fd'},
-					success: function(response){
-	         				var a = response.films;
-			 				var index, len;
-			 				for (index = 0, len = a.length; index < len; ++index) {
-				 				var item = a[index];
-					 				 $('.items').append('<li class="item" style="margin-bottom: 1rem">    <a class="link" href="/kino/?id='+item.filmId+'&title='+item.nameRu+' ('+item.year+')" target="_blank" title="'+item.nameRu+' ('+item.year+')">        <div class="cover-wrap">          <div class="cover js-b-lazy fadeIn animated" style="background-image: url('+item.posterUrlPreview+');"></div></div>     <div class="description">     <h3 class="title">'+item.nameRu+'</h3>      <span class="desc">     <span class="rating">'+item.rating+'</span>    <span class="year">'+item.year+'</span></span></div></a></li>');
-							}
-					}
-	});
 
-	
-
-	$.ajax({
-			 		async: true,
-			 		crossDomain: true,
-					url: 'https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_100_POPULAR_FILMS&page=2',
-					type: 'GET',
-			 		headers: {'X-API-KEY':'1c547473-0385-454b-a351-8c41f27ea5fd'},
-					success: function(response){
-	         				var a = response.films;
-			 				var index, len;
-			 				for (index = 0, len = a.length; index < len; ++index) {
-				 				var item = a[index];
-					 				 $('.items').append('<li class="item" style="margin-bottom: 1rem">    <a class="link" href="/kino/?id='+item.filmId+'&title='+item.nameRu+' ('+item.year+')" target="_blank" title="'+item.nameRu+' ('+item.year+')">        <div class="cover-wrap">          <div class="cover js-b-lazy fadeIn animated" style="background-image: url('+item.posterUrlPreview+');"></div></div>     <div class="description">     <h3 class="title">'+item.nameRu+'</h3>      <span class="desc">     <span class="rating">'+item.rating+'</span>    <span class="year">'+item.year+'</span></span></div></a></li>');
-							}
-					}
-	});
-
-	$.ajax({
-			 		async: true,
-			 		crossDomain: true,
-					url: 'https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_100_POPULAR_FILMS&page=3',
-					type: 'GET',
-			 		headers: {'X-API-KEY':'1c547473-0385-454b-a351-8c41f27ea5fd'},
-					success: function(response){
-	         				var a = response.films;
-			 				var index, len;
-			 				for (index = 0, len = a.length; index < len; ++index) {
-				 				var item = a[index];
-					 				 $('.items').append('<li class="item" style="margin-bottom: 1rem">    <a class="link" href="/kino/?id='+item.filmId+'&title='+item.nameRu+' ('+item.year+')" target="_blank" title="'+item.nameRu+' ('+item.year+')">        <div class="cover-wrap">          <div class="cover js-b-lazy fadeIn animated" style="background-image: url('+item.posterUrlPreview+');"></div></div>     <div class="description">     <h3 class="title">'+item.nameRu+'</h3>      <span class="desc">     <span class="rating">'+item.rating+'</span>    <span class="year">'+item.year+'</span></span></div></a></li>');
-							}
-					}
-	});
-
-
-
+window.hash = {
+  acthash: "5ef62e8fc538412c8c273966a06d8a35"
+};
 function search() {
                 var text = document.getElementById('text').value;
-                alert('text');
+                alert(text);
               };
               $(document).ready(function() {
                 $("#text").keypress(function(e) {
