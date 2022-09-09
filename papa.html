@@ -54,7 +54,7 @@
 </br> 
 
 <div class="player1" style="text-align: center; position: relative; justify-content: center; align-items: center">
-		<input type="search" id="input" style="width: 70%; background: var(--bg-color); border: none; font-size: 8pt; color: var(--light-text-color); -webkit-border-radius: 15px; -moz-border-radius: 15px; border-radius: 15px;border-left: 0.5px var(--light-text-color) solid; border-right: 0.5px var(--light-text-color) solid; border-top: 0.5px var(--light-text-color) solid; border-bottom: 0.5px var(--light-text-color) solid; height: 25px; margin: 5px; padding-left: 10px;" placeholder="Введите название фильма или сериала и нажмите Enter или кнопку Искать"> 
+		<input type="search" id="txt" style="width: 70%; background: var(--bg-color); border: none; font-size: 8pt; color: var(--light-text-color); -webkit-border-radius: 15px; -moz-border-radius: 15px; border-radius: 15px;border-left: 0.5px var(--light-text-color) solid; border-right: 0.5px var(--light-text-color) solid; border-top: 0.5px var(--light-text-color) solid; border-bottom: 0.5px var(--light-text-color) solid; height: 25px; margin: 5px; padding-left: 10px;" placeholder="Введите название фильма или сериала и нажмите Enter или кнопку Искать"> 
 		<input type="submit" style="background: var(--bg-color); font-size: 10pt; color: var(--light-text-color);border-radius: 15px; border-left: 0.5px var(--light-text-color) solid; border-right: 0.5px var(--light-text-color) solid; border-top: 0.5px var(--light-text-color) solid; border-bottom: 0.5px var(--light-text-color) solid;cursor: pointer;width: 25%; height: 25px;" onclick="search();" value="Искать">
    	</div>
 
@@ -105,7 +105,28 @@
 	  
     </div>
   </div>
+<script>
+window.hash = {
+                  acthash: "5ef62e8fc538412c8c273966a06d8a35"
+                };
+function search() {
+                var text = document.getElementById('txt').value;
+                alert(txt);
+                window.hash = {
+                  acthash: "5ef62e8fc538412c8c273966a06d8a35"
+                };
+              };
+              $(document).ready(function() {
+                $("#txt").keypress(function(e) {
+                  if (e.keyCode == 13) {
+                    //нажата клавиша enter - здесь ваш код
+                    alert('ок');
+                    search();
+                  }
+                });
+              });
 
+</script>
 <script src="./js/checkauth.js"></script>
 <script src="./js/checking.js"></script>
 
