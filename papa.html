@@ -57,7 +57,7 @@
 		<input type="search" id="txt" style="width: 70%; background: var(--bg-color); border: none; font-size: 8pt; color: var(--light-text-color); -webkit-border-radius: 15px; -moz-border-radius: 15px; border-radius: 15px;border-left: 0.5px var(--light-text-color) solid; border-right: 0.5px var(--light-text-color) solid; border-top: 0.5px var(--light-text-color) solid; border-bottom: 0.5px var(--light-text-color) solid; height: 25px; margin: 5px; padding-left: 10px;" placeholder="Введите пароль и нажмите Enter или кнопку Enter"> 
 		<input type="submit" style="background: var(--bg-color); font-size: 10pt; color: var(--light-text-color);border-radius: 15px; border-left: 0.5px var(--light-text-color) solid; border-right: 0.5px var(--light-text-color) solid; border-top: 0.5px var(--light-text-color) solid; border-bottom: 0.5px var(--light-text-color) solid;cursor: pointer;width: 25%; height: 25px;" onclick="search();" value="Enter">
    	</div>
-
+</br> </br> </br> 
 <button style="font-size:13px;" onclick="location.href='/search';"> <b><u> ❤️‍🔥 Я уже авторизован и хочу смотреть 🖥 </u></b> </button>
 
 </br>
@@ -74,11 +74,6 @@ window.hash = {
                 };
 function search() {
                 var text = document.getElementById('txt').value;
-                alert('текст' + text);
-                window.hash = {
-                  acthash: "5ef62e8fc538412c8c273966a06d8a35"
-                };
-                alert('хеш' + hash.acthash);
                      if (MD5(input.value)==hash.acthash) {
                        alert(input.value + txt);
                        localStorage.removeItem('pass');
