@@ -1,0 +1,390 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width initial-scale=1">
+<link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/dudo4nik.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="icons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#000000">
+<meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png">
+<meta name="theme-color" content="#000000">
+<meta name="description" content="На экран «Домой» или Установить приложение, для получения на ваше устройство нашего приложения...">
+
+  <script type="text/javascript" src="//counter.websiteout.net/js/36/0/1988/0"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/jquery-ui.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>❤️‍🔥Дудочник от pegakmop®️</title>
+  <style>
+    :root {
+      touch-action: pan-x pan-y;
+      height: 100%
+    }
+
+    body {
+      overflow: hidden;
+      background-image: url(/logo.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      font-family: sans-serif;
+      margin: 0;
+
+    }
+
+    .topbar {
+      width: 100%;
+      position: fixed;
+      background-color: rgba(0, 0, 0, 0.6);
+      backdrop-filter: saturate(180%) blur(100px);
+      -webkit-backdrop-filter: saturate(180%) blur(100px);
+      color: white;
+      padding: 20px 0px;
+      text-align: center;
+      top: 0;
+      font-weight: bold;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    .bottombar {
+      width: 100%;
+      position: fixed;
+      background-color: rgba(0, 0, 0, 0.6);
+      backdrop-filter: saturate(180%) blur(100px);
+      -webkit-backdrop-filter: saturate(180%) blur(100px);
+      color: white;
+      bottom: 0;
+      padding: 20px 0px;
+    }
+
+    .slider {
+      background-color: rgba(17, 17, 17, 0);
+      backdrop-filter: saturate(180%) blur(10px);
+      -webkit-backdrop-filter: saturate(180%) blur(10px);
+      padding: 15px 0px;
+      border-radius: 10px;
+      color: white;
+      width: 90%;
+      text-align: center;
+      color: rgb(255, 255, 255);
+      margin: 0;
+    }
+
+    .arrow {
+      font-size: 20px;
+      left: 34px;
+      color: white;
+      position: absolute;
+      opacity: 0.3;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      pointer-events: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    .sliderbox {
+      background-color: rgba(255, 255, 255, 0.2);
+      backdrop-filter: saturate(180%) blur(4px);
+      -webkit-backdrop-filter: saturate(180%) blur(4px);
+      border-radius: 10px;
+      position: absolute;
+      -webkit-tap-highlight-color: transparent;
+      padding: 10px 0px;
+      width: 80px;
+      height: 30px;
+      margin-top: -15px;
+      z-index: 999 !important;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+    }
+
+    .modal-content {
+      position: relative;
+      background-color: rgba(0, 0, 0, 0.7);
+      backdrop-filter: saturate(180%) blur(10px);
+      -webkit-backdrop-filter: saturate(180%) blur(10px);
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      color: white;
+      -webkit-animation-name: animatetop;
+      -webkit-animation-duration: 0.4s;
+      animation-name: animatetop;
+      animation-duration: 0.4s
+    }
+
+    span {
+      transform: translate(-50%, -50%);
+      color: #ffffff;
+      background: linear-gradient(to right, #c2c2c2 0, white 10%, #c2c2c2 20%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shine 5s infinite linear;
+      animation-fill-mode: forwards;
+      -webkit-text-size-adjust: none;
+      text-decoration: none: white-space: nowrap;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      opacity: 0.5;
+    }
+
+    @-webkit-keyframes animatetop {
+      from {
+        top: -300px;
+        opacity: 0
+      }
+
+      to {
+        top: 0;
+        opacity: 1
+      }
+    }
+
+    @keyframes animatetop {
+      from {
+        top: -300px;
+        opacity: 0
+      }
+
+      to {
+        top: 0;
+        opacity: 1
+      }
+    }
+
+    @keyframes shine {
+      0% {
+        background-position: 0;
+      }
+
+      60% {
+        background-position: 180px;
+      }
+
+      100% {
+        background-position: 180px;
+      }
+    }
+
+    .t1,
+    .t2,
+    .t3 {
+      display: none;
+    }
+
+    .modal-header {
+      padding: 2px 16px;
+      background-color: rgba(0, 0, 0, 0.1);
+      color: white;
+    }
+
+    .modal-body {
+      padding: 2px 16px;
+    }
+  </style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // конечная дата
+      const deadline = new Date(new Date().getFullYear(), new Date().getMonth() + 1, 01);
+      // id таймера
+      let timerId = null;
+      // склонение числительных
+      function declensionNum(num, words) {
+        return words[(num % 100 > 4 && num % 100 < 20) ? 2 : [2, 0, 1, 1, 1, 2][(num % 10 < 5) ? num % 10 : 5]];
+      }
+      // вычисляем разницу дат и устанавливаем оставшееся времени в качестве содержимого элементов
+      function countdownTimer() {
+        const diff = deadline - new Date();
+        if (diff <= 0) {
+          clearInterval(timerId);
+        }
+        const days = diff > 0 ? Math.floor(diff / 1000 / 60 / 60 / 24) : 0;
+        const hours = diff > 0 ? Math.floor(diff / 1000 / 60 / 60) % 24 : 0;
+        const minutes = diff > 0 ? Math.floor(diff / 1000 / 60) % 60 : 0;
+        const seconds = diff > 0 ? Math.floor(diff / 1000) % 60 : 0;
+        $days.textContent = days < 10 ? '0' + days : days;
+        $hours.textContent = hours < 10 ? '0' + hours : hours;
+        $minutes.textContent = minutes < 10 ? '0' + minutes : minutes;
+        $seconds.textContent = seconds < 10 ? '0' + seconds : seconds;
+        $days.dataset.title = declensionNum(days, ['день', 'дня', 'дней']);
+        $hours.dataset.title = declensionNum(hours, ['час', 'часа', 'часов']);
+        $minutes.dataset.title = declensionNum(minutes, ['минута', 'минуты', 'минут']);
+        $seconds.dataset.title = declensionNum(seconds, ['секунда', 'секунды', 'секунд']);
+      }
+      // получаем элементы, содержащие компоненты даты
+      const $days = document.querySelector('.timer__days');
+      const $hours = document.querySelector('.timer__hours');
+      const $minutes = document.querySelector('.timer__minutes');
+      const $seconds = document.querySelector('.timer__seconds');
+      // вызываем функцию countdownTimer
+      countdownTimer();
+      // вызываем функцию countdownTimer каждую секунду
+      timerId = setInterval(countdownTimer, 1000);
+    });
+  </script>
+
+</head>
+
+<body>
+  <div class="topbar"> <button style="font-size:13px;" onclick="window.open('/password')">Авторизоваться или Купить премиум-доступ </button> </div>
+
+</br> </br> </br> 
+
+<div class="timer">
+      <h3><b><div class="timer__items"> <p align="center"> 
+      <div style="float: left; width: 7%;" class="timer__item timer__days">00</div> 
+      <div style="float: left; width: 7%;" class="timer__item timer__hours">00</div>  
+      <div style="float: left; width: 7%;" class="timer__item timer__minutes">00</div> 
+      <div style="float: left; width: 7%;" class="timer__item timer__seconds">00</div>   </p>
+    </div> </b></h3> 
+</div>
+
+  <div class="bottombar" id="hide">
+    <center>
+      <div class="slider" id="well">
+        <div class="sliderbox" id="slider">
+          <div class="arrow">→</div>
+        </div> <span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </b> <a href=/genres> Сдвиньте для разблокировки </a></b> </span> 
+      </div> </br> </br> 
+    </center>
+
+  </div>
+  </div>
+
+  <div id="myModal" class="modal">
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1> ❤️‍🔥 Дудочник ❤️‍🔥 </br>  <button style="font-size:13px;" onclick="location.href='/genres';">Уже авторизован? Начать просмотр!</button> </h1>
+      </div>
+      <div class="modal-body">
+          <p class="t1" id="tt1"> Введите ваш ключ-пароль премиумдоступа на месяц и нажмите enter, для доступа к просмотру <b><u>Фильмов</b></u> и <b><u>Сериалов</b></u>! </br> </br>  &nbsp; &nbsp; &nbsp; 		<input type="search" id="txt" style="width: 70%; background: var(--bg-color); border: none; font-size: 8pt; color: var(--light-text-color); -webkit-border-radius: 15px; -moz-border-radius: 15px; border-radius: 15px;border-left: 0.5px var(--light-text-color) solid; border-right: 0.5px var(--light-text-color) solid; border-top: 0.5px var(--light-text-color) solid; border-bottom: 0.5px var(--light-text-color) solid; height: 25px; margin: 5px; padding-left: 10px;" placeholder="Введите пароль и нажмите Enter или кнопку Enter">
+		<input type="submit" style="background: var(--bg-color); font-size: 10pt; color: var(--light-text-color);border-radius: 15px; border-left: 0.5px var(--light-text-color) solid; border-right: 0.5px var(--light-text-color) solid; border-top: 0.5px var(--light-text-color) solid; border-bottom: 0.5px var(--light-text-color) solid;cursor: pointer;width: 25%; height: 25px;" onclick="search();" value="Enter">
+ </p> </a></p>
+          <p class="t2" id="tt2"> <button style="font-size:13px;" onclick="location.href='/search';"> ❤️‍🔥 Я уже авторизован и хочу смотреть 🖥</button> </br> </br>  Смена ваших паролей обычно происходит в конце месяца, приятного просмотра и спасибо что вы остаётесь с нами ❤️‍🔥</br> </br> С любовью ❤️‍🔥 Пегий Дудочник... </br> </br> </p>
+          <p class="t3" id="tt3"> <button style="font-size:13px;" onclick="window.open('/iads')">📵AdGuard DNS - скажи рекламе нет!📲 </button> </p>
+      </div>
+
+    </div>
+
+  </div>
+
+<script>alert('Работа сервиса восстановлена)</script>
+
+<script src="./js/checkauth.js"></script>
+<script src="./js/keys.js"></script>
+
+</body>
+<script>
+  var modal = document.getElementById("myModal");
+
+  var t1 = document.getElementById("tt1");
+  var t2 = document.getElementById("tt2");
+  var t3 = document.getElementById("tt3");
+  var hid = document.getElementById("arw");
+
+  var span = document.getElementsByClassName("close")[0];
+
+
+  function text() {
+    setTimeout(function () {
+      t1.style.display = "block";
+    }, 999);
+    setTimeout(function () {
+      t2.style.display = "block";
+    }, 3333);
+    setTimeout(function () {
+      t3.style.display = "block";
+    }, 8888);      
+    setTimeout(function () {
+      window.location.href = '/apps';
+    }, 55555);
+  }
+
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+
+  $(function () {
+
+    $("#slider").draggable({
+      axis: 'x',
+      containment: 'parent',
+      drag: function (event, ui) {
+        if (ui.position.left > 200) {
+          modal.style.display = "block";
+          $("#well").fadeOut();
+          text();
+        } else {
+
+        }
+      },
+      stop: function (event, ui) {
+        if (ui.position.left < 200) {
+          $(this).animate({
+            left: 0
+          })
+        }
+      }
+    });
+
+    $('#slider')[0].addEventListener('touchmove', function (event) {
+      event.preventDefault();
+      var el = event.target;
+      var touch = event.touches[0];
+      curX = touch.pageX - this.offsetLeft - 73;
+      if (curX <= 0) return;
+      if (curX > 100) {
+        modal.style.display = "block";
+        $("#well").fadeOut();
+        text();
+      }
+      el.style.webkitTransform = 'translateX(' + curX + 'px)';
+    }, false);
+
+    $('#slider')[0].addEventListener('touchend', function (event) {
+      this.style.webkitTransition = '-webkit-transform 0.3s ease-in';
+      this.addEventListener('webkitTransitionEnd', function (event) {
+        this.style.webkitTransition = 'none';
+      }, false);
+      this.style.webkitTransform = 'translateX(0px)';
+    }, false);
+
+  });
+</script>
+</html>
