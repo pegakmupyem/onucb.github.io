@@ -2,7 +2,7 @@ const input = document.getElementById('txt');
 window.hash = {
                   acthash: "5ef62e8fc538412c8c273966a06d8a35"
                 };
-function search() {
+function search69() {
                 var text = document.getElementById('txt').value;
                      if (MD5(input.value)==hash.acthash) { 
                        localStorage.removeItem('pass');
@@ -18,7 +18,7 @@ function search() {
                 $("#txt").keypress(function(e) {
                   if (e.keyCode == 13) {
                     //нажата клавиша enter - здесь ваш код
-                    search();
+                    search69();
                   }
                 });
               });
