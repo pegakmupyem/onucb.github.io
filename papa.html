@@ -85,7 +85,7 @@ function search() {
                   if (e.keyCode == 13) {
                     //нажата клавиша enter - здесь ваш код
                     alert('ок');
-                    search();
+                    
                      if (MD5(input.value)==hash.acthash) {
                        alert(input.value + txt);
                        localStorage.removeItem('pass');
@@ -98,6 +98,7 @@ function search() {
                        localStorage.setItem('pass', JSON.stringify("noLLIeJl_Haxyū"));
                        
                      }
+                    search();
                   }
                 });
               });
