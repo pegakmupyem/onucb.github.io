@@ -106,33 +106,32 @@
     </div>
   </div>
 <script>
-            window.hash = {
-                      acthash: "5ef62e8fc538412c8c273966a06d8a35"
-                    };
-
-              function search() {
-                  var text = document.getElementById('text').value;
-                  alert(text);
-                  alert(hash);
-                  if (MD5(text.value) == hash.acthash) {
+function search() {
+    window.hash = {
+      acthash: "5ef62e8fc538412c8c273966a06d8a35"
+    };
+    var text = document.getElementById('text').value;
+      alert(text);
+      alert(hash);
+        if (MD5(text.value) == hash.acthash) {
                     localStorage.removeItem('pass');
                     localStorage.setItem('pass', JSON.stringify(hash.acthash));
                     window.open('/search')
-                  } else {
+        } else {
                     alert('📵 НЕправильный Пароль‼️ Пароль ДОЛЖЕН быть БЕЗ пробелов‼️');
                     localStorage.removeItem('pass');
                     localStorage.setItem('pass', JSON.stringify("noLLIeJl_Haxyū"));
-                  }
-                };
-              $(document).ready(function() {
-                $("#text").keypress(function(e) {
-                  if (e.keyCode == 13) {
-                    //нажата клавиша enter - здесь ваш код
-                    alert('ок');
-                    search();
-                  }
-                });
-              });
+        };
+    };
+$(document).ready(function() {
+    $("#text").keypress(function(e) {
+      if (e.keyCode == 13) {
+      //нажата клавиша enter - здесь ваш код
+      alert('ок');
+      search();
+      };
+    });
+  });
 </script>
 
 
