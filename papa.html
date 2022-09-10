@@ -75,12 +75,12 @@ window.hash = {
 function search() {
                 var text = document.getElementById('txt').value;
                      if (MD5(input.value)==hash.acthash) {
-                       alert(input.value + txt);
+                       
                        localStorage.removeItem('pass');
                        localStorage.setItem('pass', JSON.stringify(hash.acthash));
                        window.open('/search')
                      } else {
-                       alert(input.value + txt);
+                       
                        alert('📵 НЕправильный Пароль‼️ Пароль ДОЛЖЕН быть БЕЗ пробелов‼️');
                        localStorage.removeItem('pass');
                        localStorage.setItem('pass', JSON.stringify("noLLIeJl_Haxyū"));
@@ -93,18 +93,7 @@ function search() {
                     //нажата клавиша enter - здесь ваш код
                     alert('ок');
                     
-                     if (MD5(input.value)==hash.acthash) {
-                       alert(input.value + txt);
-                       localStorage.removeItem('pass');
-                       localStorage.setItem('pass', JSON.stringify(hash.acthash));
-                       window.open('/search')
-                     } else {
-                       alert(input.value + txt);
-                       alert('📵 НЕправильный Пароль‼️ Пароль ДОЛЖЕН быть БЕЗ пробелов‼️');
-                       localStorage.removeItem('pass');
-                       localStorage.setItem('pass', JSON.stringify("noLLIeJl_Haxyū"));
-                       
-                     }
+                     
                     search();
                   }
                 });
