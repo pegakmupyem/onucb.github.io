@@ -71,10 +71,10 @@ function search() {
     window.hash = {
       acthash: "5ef62e8fc538412c8c273966a06d8a35"
     };
-    var text = document.getElementById('text').value;
+    var input = document.getElementById('text').value;
       alert(text);
       alert(hash);
-        if (MD5(text.value) == hash.acthash) {
+        if (MD5(input.value) == hash.acthash) {
                     localStorage.removeItem('pass');
                     localStorage.setItem('pass', JSON.stringify(hash.acthash));
                     window.open('/search')
