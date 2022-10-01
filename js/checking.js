@@ -1,6 +1,6 @@
 const input = document.getElementById('txt');
 window.hash = {
-                  acthash: "5ef62e8fc538412c8c273966a06d8a35"
+                  acthash: "2d0303ef79ac811d752643733e79bce2"
                 };
 function search69() {
                 var text = document.getElementById('txt').value;
