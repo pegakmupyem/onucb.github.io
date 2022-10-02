@@ -1,8 +1,8 @@
 /* return input field to variable text */
-var text = document.getElementById("inputText");
+var text = document.getElementById("inputText1");
 
 /* return button to variable btn */
-var btn = document.getElementById("copyText");
+var btn = document.getElementById("copyText1");
 
 /* call function on button click */
 btn.onclick = function() {
