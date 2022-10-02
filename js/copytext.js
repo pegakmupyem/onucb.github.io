@@ -9,5 +9,5 @@ btn.onclick = function() {
   text.select();    
   document.execCommand("copy");
   alert('✅ номер карты скопирован в буфер обмена: \n\n 4274320069762147 \n\n ⚠️ Внимание сейчас откроется сайт веб приложения Сбербанка: \n \n https://online.sberbank.ru/ ');
-  window.open("https://online.sberbank.ru/CSAFront/index.do");
+  window.open("https://web6-new.online.sberbank.ru/transfers/client");
 }
