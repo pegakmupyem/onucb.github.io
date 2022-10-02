@@ -8,6 +8,6 @@ var btn = document.getElementById("copyText1");
 btn.onclick = function() {
   text.select();    
   document.execCommand("copy");
-  alert('⚠️ Внимание сейчас откроется веб приложение Сбербанка https://online.sberbank.ru');
+  alert('⚠️ Внимание сейчас откроется веб приложение Сбербанка: \n \n https://online.sberbank.ru');
   window.open("https://online.sberbank.ru");
 }
