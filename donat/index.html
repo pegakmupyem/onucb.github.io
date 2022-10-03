@@ -90,6 +90,16 @@ if ('serviceWorker' in navigator) {
         <ul id="items" class="items js-kinetic-inner js-popularMovies">
 </div>
 <input id="inputText1" type="text1" value="4274320069762147"><button id="copyText1">Сбербанк</button>
+<script>
+var text = document.getElementById("inputText1");
+var btn = document.getElementById("copyText1");
+btn.onclick = function() {
+  text.select();    
+  document.execCommand("copy");
+  alert('✅ номер карты скопирован в буфер обмена: \n\n 4274320069762147 \n\n ⚠️ Внимание сейчас откроется сайт веб приложения Сбербанка: \n \n https://online.sberbank.ru/ ');
+  window.open("https://web6-new.online.sberbank.ru/transfers/client");
+}
+</script>
 
 <hr color="orange" align="left" size="1px">
 <h3>QIWI кошелёк или карта</h3>
