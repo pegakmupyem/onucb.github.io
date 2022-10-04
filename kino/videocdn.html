@@ -5,15 +5,9 @@
 <title>videocdn</title>
 </head>
 <body>
-<div data-player="videocdn" data-separator="," data-button="videocdn: Видео {Q} {T}" data-resize="1" data-loading="/kinoplay/assets/loading.webp" data-kinopoisk="" id="kinobd"></div>
-
 <script>
-		const kinobd = document.getElementById('kinobd');
 		const id = window.location.hash.substring(1);
-		kinobd.setAttribute('data-kinopoisk', id);
-                
 </script>
-</Br> <script src="//kinobd.ru/js/player_.js"></script> </Br> 
 <iframe src="'https://www.svetacdn.in/HmbAa7srBcLo?kp_id='+id" width="640" height="480" frameborder="0" allowfullscreen></iframe>
 </body>
 </html>
