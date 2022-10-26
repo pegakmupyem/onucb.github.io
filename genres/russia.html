@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width initial-scale=1">
+<link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/dudo4nik.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="icons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#00FF00">
+<meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png">
+<meta name="theme-color" content="#808080">
+<script src="https://cdn.plyr.io/3.6.8/plyr.js"></script>
+<script src="https://cdn.plyr.io/3.6.8/plyr.polyfilled.js"></script>
+<link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css">
+<link href="https://fonts.googleapis.com/css?family=Neucha" rel="stylesheet">
+<link href="/assets/main2.css" rel="stylesheet">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<script src="https://cdn.plyr.io/3.6.8/plyr.js"></script>
+<style rel="stylesheet">
+@font-face{font-family:Chocolate;src:url(https://raw.githubusercontent.com/aa1286901/TV/master/tv-online/fonts/painting-with-chocolate.regular-webfont.woff2) format("woff2"),url(https://raw.githubusercontent.com/aa1286901/TV/master/tv-online/fonts/painting-with-chocolate.regular-webfont.woff) format("woff"),url(https://raw.githubusercontent.com/aa1286901/TV/master/tv-online/fonts/painting-with-chocolate.regular.ttf) format("truetype"),url(https://raw.githubusercontent.com/aa1286901/TV/master/tv-online/fonts/painting-with-chocolate.regular-webfont.woff2) format("woff2"),url(https://raw.githubusercontent.com/aa1286901/TV/master/tv-online/fonts/painting-with-chocolate.regular-webfont.woff) format("woff"),url(https://raw.githubusercontent.com/aa1286901/TV/master/tv-online/fonts/painting-with-chocolate.regular.ttf) format("truetype");font-weight:400;font-style:normal}html{scroll-behavior:smooth;--tint-color:#017AFF;--semi-bold:600}*{font-family:-apple-system-font,BlinkMacSystemFont,Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif}a{color:var(--tint-color);text-decoration:none}p{max-width:600px;margin:0 auto}body{max-width:100vw;margin:0;background-color:var(--bg-color)}h1{font-size: 1em; margin-bottom: 5px;}#footer{margin-top:30px;margin-bottom:30px;text-align:center;color:var(--light-text-color)}#navbar{top:0;left:0;z-index:999;position: absolute;color:var(--text-color);width:100%;max-width:100%;overflow:hidden;transition:color .25s ease,background-color .25s ease;-webkit-transition:color .25s ease,background-color .25s ease;-moz-transition:color .25s ease,background-color .25s ease;-o-transition:color .25s ease,background-color .25s ease;-ms-transition:color .25s ease,background-color .25s ease}#navbar .right:hover{-webkit-transform:scale(1.1);transform:scale(1.1)}#navbar #navbarName:hover{-webkit-transform:scale(1.1);transform:scale(1.1)}.navBarMode{color:var(--nav-font-color)!important;background-color:var(--bg-color)}.navBarMode #navbarName,.navBarMode .right{text-shadow:none!important}.navBarMode #navbarName:hover,.navBarMode .right:hover{-webkit-transform:none!important;transform:none!important}#navInner{position:relative;min-height:80px;max-height:80px;line-height:76px;max-width:1000px;width:calc(100% - 10px);margin:0 auto}#navInner *{padding-left:25px;padding-right:25px}#navInner .right{float:right;cursor:pointer;-webkit-touch-callout:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}#navInner #navbarName{cursor:pointer;line-height:70px;font-family:Neucha,sans-serif;font-size:40pt;font-weight:700}#navInner svg{position:absolute;right:0;top:50%;-webkit-transform:translateY(calc(-50% - 2px));transform:translateY(calc(-50% - 2px))}@media only screen and (max-width:9000px){#navInner *{padding-left:10px!important;padding-right:10px!important}#navInner svg{right:10px!important;padding-left:0!important;padding-right:5px!important}}.backgroundMountain{z-index:-1;position:absolute;top:0;left:0;-webkit-filter:brightness(var(--bg-brightness-lighter));filter:brightness(var(--bg-brightness-lighter));background-size:cover;background-position:center;min-width:100%;min-height:90vh}#blurredMountain{z-index:-2;-webkit-filter:blur(10px) brightness(var(--bg-brightness));filter:blur(10px) brightness(var(--bg-brightness));min-width:100%}.mainContent{width:calc(100%);max-width:1000px;color:var(--text-color);text-align:center;margin-top:65px;margin-left:auto;margin-right:auto}h2{margin:0;font-weight:400;font-size:16pt}#privacyHeader{margin:10}.privacyContent{padding-bottom:35pt}#uncoverCenterTitle{font-family:Chocolate;font-weight:100;font-size:90pt;margin:0}@media only screen and (max-width:9000px){#uncoverCenterTitle{font-size:60pt}}.button{cursor:pointer;color:#fff;font-weight:var(--semi-bold);margin:30px auto;border-radius:100px;padding:20px;background-color:var(--tint-color);max-width:150px;transition:padding .15s ease;-webkit-transition:padding .15s ease;-moz-transition:padding .15s ease;-o-transition:padding .15s ease;-ms-transition:padding .15s ease}.button:hover{padding-left:35px;padding-right:35px}#altDownloadURL{color:var(--text-color);margin-bottom:40px;margin-top:0}#installLink{color:var(--text-color);margin-bottom:40px;margin-top:0}#payLinks{padding-bottom:20px}#payLinks a{padding-right:30px}#payLinks a:last-of-type{padding-right:0}#changelogText *{padding:0;margin:0}#changelogText li{list-style-position:inside}.creditsCardWrapper{position:relative;color:#fff;margin:15px;display:inline-block;width:calc(25vw - 40px);height:calc(25vw - 40px);max-width:200px;max-height:200px;overflow:hidden}.creditsCardWrapper img{width:calc(25vw - 40px);height:calc(25vw - 40px);max-width:200px;max-height:200px;-webkit-transition:-webkit-filter .15s ease;transition:-webkit-filter .15s ease;transition:filter .15s ease;transition:filter .15s ease,-webkit-filter .15s ease;-webkit-transition:filter .15s ease;-moz-transition:filter .15s ease;-o-transition:filter .15s ease;-ms-transition:filter .15s ease}.creditsCardWrapper:hover img{-webkit-filter:brightness(.3);filter:brightness(.3)}.creditsCardWrapper .devName{padding-top:40px;width:100%;height:100%;max-height:calc(25% + 40px);-webkit-box-sizing:border-box;box-sizing:border-box;position:absolute;top:0;left:0;background-color:rgba(0,0,0,.65);-webkit-transform:translateY(-100%);transform:translateY(-100%);-webkit-transition:-webkit-transform .25s ease;transition:-webkit-transform .25s ease;transition:transform .25s ease;transition:transform .25s ease,-webkit-transform .25s ease;-webkit-transition:transform .25s ease;-moz-transition:transform .25s ease;-o-transition:transform .25s ease;-ms-transition:transform .25s ease}.creditsCardWrapper .devType{width:100%;position:absolute;top:calc(25% + 40px);left:0;padding-top:15px;font-size:15pt;color:#fff}.creditsCardWrapper .devSocialIcon{position:absolute;bottom:30px;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%)}.creditsCardWrapper .devSocialIcon *{fill:#fff}.creditsCardWrapper .devSocialIcon,.creditsCardWrapper .devType{opacity:0;transition:opacity .25s ease;-webkit-transition:opacity .25s ease;-moz-transition:opacity .25s ease;-o-transition:opacity .25s ease;-ms-transition:opacity .25s ease}.creditsCardWrapper:hover .devSocialIcon,.creditsCardWrapper:hover .devType{opacity:1}@media only screen and (max-width:9000px){.creditsCardWrapper{width:100%;height:80px;max-width:320px;max-height:100px;border-radius:0;overflow:visible;margin:0 auto;padding-top:10px;padding-bottom:10px;border-bottom:solid 0.5px var(--light-text-color);}.creditsCardWrapper img{position:absolute;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);left:10px;width:70px;height:70px}.creditsCardWrapper .devName,.creditsCardWrapper .devType{font-size:14pt;padding-top:0;background:0 0;width:auto;height:auto;left:100px}.creditsCardWrapper .devSocialIcon,.creditsCardWrapper .devType{opacity:.65}.creditsCardWrapper .devName{color:var(--text-color);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:calc(50% - 5px);top:50%;-webkit-transform:translateY(calc(-100% - 2px));transform:translateY(calc(-100% - 2px))}.creditsCardWrapper .devType{color:var(--light-text-color);top:calc(50% + 2px)}.creditsCardWrapper .devSocialIcon{bottom:50%;left:calc(100% - 20px);-webkit-transform:translate(-100%,50%);transform:translate(-100%,50%)}.creditsCardWrapper .devSocialIcon *{fill:var(--text-color)}}#progress{border-radius:100px;overflow:hidden;width:100%;max-width:500px;background-color:var(--progress-bar-color);margin:30px auto}#progressBar{width:100%;height:calc(12pt + 5px);-webkit-transform:translateX(-100%);transform:translateX(-100%);background-color:var(--tint-color);-webkit-transition:-webkit-transform 1.15s ease;transition:-webkit-transform 1.15s ease;transition:transform 1.15s ease;transition:transform 1.15s ease,-webkit-transform 1.15s ease;-webkit-transition:transform 1.15s ease;-moz-transition:transform 1.15s ease;-o-transition:transform 1.15s ease;-ms-transition:transform 1.15s ease;transition-delay:.5s;-webkit-transition-delay:.5s;-moz-transition-delay:.5s;-o-transition-delay:.5s}#legacyReleases{display:none}#legacyReleases .releaseTableView{margin:0 auto;position:relative;color:var(--light-text-color);text-align:left;width:100%;max-width:600px;border-bottom-style:solid;border-width:1px;border-color:var(--border-color);padding-bottom:10px;padding-top:10px}#legacyReleases .releaseTableView:first-of-type{margin-top:30px;border-top-style:solid}#legacyReleases .releaseTableView .releaseVersion{display:block;color:var(--text-color);font-weight:var(--semi-bold);font-size:16pt}#legacyReleases .releaseTableView .button{position:absolute;margin:0;top:15px;right:10px;padding:8px 20px;text-align:center}#legacyReleases .releaseTableView ul{width:calc(100% - 120px);overflow:hidden;text-overflow:ellipsis}#legacyReleases .releaseTableView ul li:first-of-type{display:list-item}#legacyReleases .releaseTableView ul li{display:none}#legacyReleases .releaseTableView .viewMoreButton{cursor:pointer;position:absolute;bottom:calc(10px + 12pt);right:20px;color:var(--tint-color);-webkit-touch-callout:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}#legacyReleases .expanded ul{width:calc(100% - 50px);margin-bottom:45px}#legacyReleases .expanded ul li{display:list-item}#viewLegacyVersions{color:var(--light-text-color);cursor:pointer;-webkit-touch-callout:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.hidden{opacity:0}@-webkit-keyframes fadeIn{from{opacity:0;-webkit-transform:scale(.5);transform:scale(.5)}to{opacity:1}}@keyframes fadeIn{from{opacity:0;-webkit-transform:scale(.5);transform:scale(.5)}to{opacity:1}}.fadeInElement{-webkit-animation:fadeIn .8s;animation:fadeIn .8s}@-webkit-keyframes expandOut{0%{opacity:0}50%{opacity:0;-webkit-transform:scale(1.2);transform:scale(1.2);color:transparent;padding-left:80px;padding-right:80px}100%{opacity:1}}@keyframes expandOut{0%{opacity:0}50%{opacity:0;-webkit-transform:scale(1.2);transform:scale(1.2);color:transparent;padding-left:80px;padding-right:80px}100%{opacity:1}}.expandOutElement{animation-fill-mode:forwards;-webkit-animation-fill-mode:forwards;-webkit-animation:expandOut 1.6s;animation:expandOut 1.6s}@-webkit-keyframes fadeUp{0%{opacity:0}75%{opacity:0;-webkit-transform:scale(.5) translateY(200%);transform:scale(.5) translateY(200%)}100%{opacity:1}}@keyframes fadeUp{0%{opacity:0}75%{opacity:0;-webkit-transform:scale(.5) translateY(200%);transform:scale(.5) translateY(200%)}100%{opacity:1}}.fadeUpElement{animation-fill-mode:forwards;-webkit-animation-fill-mode:forwards;-webkit-animation:fadeUp 2s;animation:fadeUp 2s}#detailedInfo{width:100%;margin-top:100px;margin-left:auto;margin-right:auto;position:relative}#detailedInfo .aboutJailbreak{padding-bottom:60pt}#detailedInfo .aboutJailbreak h1{font-size:20pt;margin:0;margin-bottom:20px}#detailedInfo .aboutJailbreak p{opacity:.65}#detailedInfo .featureWrapper{display:inline-block;text-align:center;padding:30px 10px;background-repeat:no-repeat;background-size:80px 80px;background-position:center 10px;width:calc(33.33% - 10px);min-width:300px;}#detailedInfo .featureWrapper h1{font-size:20pt;margin:0;margin-bottom:20px}#detailedInfo .featureWrapper p{opacity:.65}#detailedInfo .featureWrapper svg{margin-bottom:20px}#detailedInfo .featureWrapper svg *{fill:var(--text-color)}html{--bg-color:#fafafa;--border-color:rgba(0,0,0,.075);--progress-bar-color:rgba(0,0,0,.15);--nav-color:white;--nav-font-color:black;--text-color:rgb(0,0,0);--light-text-color:rgba(0,0,0,.65);--bg-brightness-lighter:280%;--bg-brightness:110%}.darkMode{--bg-color:#161616;--border-color:rgba(255,255,255,.075);--progress-bar-color:rgba(255,255,255,.15);--nav-color:#1e1e1e;--nav-font-color:white;--text-color:rgb(255, 255, 255);--light-text-color:rgba(255,255,255,.65);--bg-brightness-lighter:40%;--bg-brightness:25%}.player1{-webkit-animation:fadeIn .8s; animation:fadeIn .8s; width: 570px; margin-left: -285px; left: 50%; position: absolute; margin-bottom: 10px; margin-top: 70px;} @media screen and (max-width: 600px) {.player1 {width: 300px; margin-left: -150px; left: 50%}} @media screen and (max-height: 420px) {.player1 {width: 300px; margin-left: -150px; left: 50%}}#navbar .right,#navbar a{color:var(--nav-font-color)}#navbar *{-webkit-touch-callout:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.navBarMode{color:var(--nav-font-color)!important;background-color:var(--nav-color)}.navBarMode #navbarName,.navBarMode .right{text-shadow:none!important}.navBarMode #navbarName:hover,.navBarMode .right:hover{-webkit-transform:none!important;transform:none!important;color:var(--tint-color)!important;border-bottom:solid 4px var(--tint-color)}.navBarMode svg:hover path{fill:var(--tint-color)}#navInner{position:relative;min-height:65px;max-height:65px;line-height:65px;max-width:1000px;width:calc(100%);margin:0 auto;text-align: center}#navInner *{padding-left:25px;padding-right:25px}#navInner .right{float:right;cursor:pointer}.footer {border-left: 1px var(--light-text-color) solid;border-right: 1px var(--light-text-color) solid;border-top: 1px var(--light-text-color) solid;border-bottom: 1px var(--light-text-color) solid;border-radius: 10px;cursor: pointer;padding: 0px 2px 0px 2px;position: relative;color: var(--light-text-color);font-size: 12px;top: 95%;width: 100px;left: 50%; margin: 5px; margin-left: -50px; margin-top: 5px; font-family: monospace; font-style: italic;}.freehosting-2domains-link {display: none;}
+</style>
+  <title>@Piper_Pied 🔎</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+
+  <script src="https://use.fontawesome.com/4ca20d00e4.js"></script>
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/sw.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+</script>
+
+<script type="module">
+   import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+   const el = document.createElement('pwa-update');
+   document.body.appendChild(el);
+</script>
+
+<style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      :root {
+        scroll-behavior: smooth;
+      }
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #00ff00;
+      -webkit-text-size-adjust: 100%;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      display: flex;
+      justify-content: center;
+    }
+
+    .timer__items {
+      display: flex;
+      font-size: 48px;
+    }
+
+    .timer__item {
+      position: relative;
+      min-width: 60px;
+      margin-left: 10px;
+      margin-right: 10px;
+      padding-bottom: 15px;
+      text-align: center;
+    }
+
+    .timer__item::before {
+      content: attr(data-title);
+      display: block;
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      font-size: 14px;
+    }
+
+    .timer__item:not(:last-child)::after {
+      content: ':';
+      position: absolute;
+      right: -15px;
+    }
+  </style>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // конечная дата
+      const deadline = new Date(new Date().getFullYear(), new Date().getMonth() + 1, 01);
+      // id таймера
+      let timerId = null;
+      // склонение числительных
+      function declensionNum(num, words) {
+        return words[(num % 100 > 4 && num % 100 < 20) ? 2 : [2, 0, 1, 1, 1, 2][(num % 10 < 5) ? num % 10 : 5]];
+      }
+      // вычисляем разницу дат и устанавливаем оставшееся времени в качестве содержимого элементов
+      function countdownTimer() {
+        const diff = deadline - new Date();
+        if (diff <= 0) {
+          clearInterval(timerId);
+        }
+        const days = diff > 0 ? Math.floor(diff / 1000 / 60 / 60 / 24) : 0;
+        const hours = diff > 0 ? Math.floor(diff / 1000 / 60 / 60) % 24 : 0;
+        const minutes = diff > 0 ? Math.floor(diff / 1000 / 60) % 60 : 0;
+        const seconds = diff > 0 ? Math.floor(diff / 1000) % 60 : 0;
+        $days.textContent = days < 10 ? '0' + days : days;
+        $hours.textContent = hours < 10 ? '0' + hours : hours;
+        $minutes.textContent = minutes < 10 ? '0' + minutes : minutes;
+        $seconds.textContent = seconds < 10 ? '0' + seconds : seconds;
+        $days.dataset.title = declensionNum(days, ['день', 'дня', 'дней']);
+        $hours.dataset.title = declensionNum(hours, ['час', 'часа', 'часов']);
+        $minutes.dataset.title = declensionNum(minutes, ['минута', 'минуты', 'минут']);
+        $seconds.dataset.title = declensionNum(seconds, ['секунда', 'секунды', 'секунд']);
+      }
+      // получаем элементы, содержащие компоненты даты
+      const $days = document.querySelector('.timer__days');
+      const $hours = document.querySelector('.timer__hours');
+      const $minutes = document.querySelector('.timer__minutes');
+      const $seconds = document.querySelector('.timer__seconds');
+      // вызываем функцию countdownTimer
+      countdownTimer();
+      // вызываем функцию countdownTimer каждую секунду
+      timerId = setInterval(countdownTimer, 1000);
+    });
+  </script>
+
+</head>
+<body>
+		<div id="navbar" class="">
+        <div id="navInner">
+            <span id="navbarName" onclick="location.href='/apps';">🔍Дудочник🔎</span>
+        </div>
+    </div>
+  <div class="container">
+    <div class="box">
+
+    <div class="backgroundMountain"></div>
+    <div class="backgroundMountain" id="blurredMountain"></div>
+    <div class="mainContent">
+
+	</br> 
+
+        <input type="submit" style="background: var(--bg-color); font-size: 5pt; color: var(--light-text-color);border-radius: 11px; border-left: 0.5px var(--light-text-color) solid; border-right: 0.5px var(--light-text-color) solid; border-top: 0.5px var(--light-text-color) solid; border-bottom: 0.5px var(--light-text-color) solid;cursor: pointer;width: 13%; height: 25px;" onclick="location.href='/news/';" value="Ожидаемые">
+&nbsp; &nbsp; &nbsp; <input type="submit" style="background: var(--bg-color); font-size: 5pt; color: var(--light-text-color);border-radius: 11px; border-left: 0.5px var(--light-text-color) solid; border-right: 0.5px var(--light-text-color) solid; border-top: 0.5px var(--light-text-color) solid; border-bottom: 0.5px var(--light-text-color) solid;cursor: pointer;width: 13%; height: 25px;" onclick="location.href='/popular/';" value="Популярные">
+&nbsp; &nbsp; &nbsp; <input type="submit" style="background: var(--bg-color); font-size: 5pt; color: var(--light-text-color);border-radius: 11px; border-left: 0.5px var(--light-text-color) solid; border-right: 0.5px var(--light-text-color) solid; border-top: 0.5px var(--light-text-color) solid; border-bottom: 0.5px var(--light-text-color) solid;cursor: pointer;width: 13%; height: 25px;" onclick="location.href='/favorites';" value="Избранное">
+&nbsp; &nbsp; &nbsp; <input type="submit" style="background: var(--bg-color); font-size: 5pt; color: var(--light-text-color);border-radius: 11px; border-left: 0.5px var(--light-text-color) solid; border-right: 0.5px var(--light-text-color) solid; border-top: 0.5px var(--light-text-color) solid; border-bottom: 0.5px var(--light-text-color) solid;cursor: pointer;width: 13%; height: 25px;" onclick="location.href='/top250/';" value="Лучшие">
+&nbsp; &nbsp; &nbsp; <input type="submit" style="background: var(--bg-color); font-size: 5pt; color: var(--light-text-color);border-radius: 11px; border-left: 0.5px var(--light-text-color) solid; border-right: 0.5px var(--light-text-color) solid; border-top: 0.5px var(--light-text-color) solid; border-bottom: 0.5px var(--light-text-color) solid;cursor: pointer;width: 13%; height: 25px;" onclick="location.href='/premiere/';" value="Премьеры">
+
+
+	<div class="player1" style="text-align: center; position: relative; justify-content: center; align-items: center">
+		<input type="search" id="text" style="width: 70%; background: var(--bg-color); border: none; font-size: 7pt; color: var(--light-text-color); -webkit-border-radius: 15px; -moz-border-radius: 15px; border-radius: 15px;border-left: 0.5px var(--light-text-color) solid; border-right: 0.5px var(--light-text-color) solid; border-top: 0.5px var(--light-text-color) solid; border-bottom: 0.5px var(--light-text-color) solid; height: 25px; margin: 5px; padding-left: 10px;" placeholder="Введите название фильма или сериала?">
+		<input type="submit" style="background: var(--bg-color); font-size: 10pt; color: var(--light-text-color);border-radius: 15px; border-left: 0.5px var(--light-text-color) solid; border-right: 0.5px var(--light-text-color) solid; border-top: 0.5px var(--light-text-color) solid; border-bottom: 0.5px var(--light-text-color) solid;cursor: pointer;width: 25%; height: 25px;" onclick="search();" value="Искать">
+
+   	</div>
+<select id='yearfrom' onchange="firstyear=this.value">
+  <option value="1000">Выберите от какого года</option>
+</select>
+
+<select id='yearto' onchange="secondyear=this.value">
+  <option value="3000">Выберите до какого года</option>
+</select>
+        <select id='ratingback' onchange="firstrating=this.value">
+          <option value="0"> От 0 рейтинг </option>
+          <option value="1"> От 1 рейтинг </option>
+          <option value="2"> От 2 рейтинг </option>
+          <option value="3"> От 3 рейтинг </option>
+          <option value="4"> От 4 рейтинг </option>
+          <option value="5"> От 5 рейтинг </option>
+          <option value="6"> От 6 рейтинг </option>
+          <option value="7"> От 7 рейтинг </option>
+          <option value="8"> От 8 рейтинг </option>
+          <option value="9"> От 9 рейтинг </option>
+        </select>
+        <select id='ratingnext' onchange="secondrating=this.value">
+          <option value="10"> До 10 рейтинг </option>
+          <option value="9"> До 9 рейтинг </option>
+          <option value="8"> До 8 рейтинг </option>
+          <option value="7"> До 7 рейтинг </option>
+          <option value="6"> До 6 рейтинг </option>
+          <option value="5"> До 5 рейтинг </option>
+          <option value="4"> До 4 рейтинг </option>
+          <option value="3"> До 3 рейтинг </option>
+          <option value="2"> До 2 рейтинг </option>
+          <option value="1"> До 1 рейтинг </option>
+        </select>
+        <select id='sort' onchange="sorting=this.value">
+          <option value="NUM_VOTE"> Выберите как сортировать: </option>
+          <option value="RATING"> Сортировать по рейтингу </option>
+          <option value="YEAR"> Сортировать по годам </option>
+        </select>
+        <select id='kino' onchange="kinofilms=this.value">
+          <option value="ALL"> Выберите тип фильма: </option>
+          <option value="FILM"> Только фильмы </option>
+          <option value="TV_SHOW"> Только сериалы </option>
+          <option value="ALL"> Фильмы и сериалы </option>
+        </select>
+
+        
+
+        <select id='countrl' onchange="countries=this.value">
+          <option value="54"> Выберите Страну: </option>
+          <option value="33"> СССР </option>
+          <option value="34"> Россия </option>
+          <option value="106"> Украина </option>
+          <option value="1"> США </option>
+          <option value="2"> Швейцария </option>
+          <option value="3"> Франция </option>
+          <option value="4"> Польша </option>
+          <option value="5"> Великобритания </option>
+          <option value="6"> Швеция </option>
+          <option value="7"> Индия </option>
+          <option value="8"> Испания </option>
+          <option value="9"> Германия </option>
+          <option value="10"> Италия </option>
+          <option value="11"> Гонконг </option>
+          <option value="12"> Германия (ФРГ) </option>
+          <option value="13"> Австралия </option>
+          <option value="14"> Канада </option>
+          <option value="15"> Мексика </option>
+          <option value="16"> Япония </option>
+          <option value="17"> Дания </option>
+          <option value="18"> Чехия </option>
+          <option value="19"> Ирландия </option>
+          <option value="20"> Люксембур </option>
+          <option value="21"> Китай </option>
+          <option value="22"> Норвегия </option>
+          <option value="23"> Нидерланды </option>
+          <option value="24"> Аргентина </option>
+          <option value="25"> Финляндия </option>
+          <option value="26"> Босния и Герцовина </option>
+          <option value="27"> Австрия </option>
+          <option value="28"> Тайвань </option>
+          <option value="29"> Новая Зеландия </option>
+          <option value="30"> Бразилия </option>
+          <option value="31"> Чехословакия </option>
+          <option value="32"> Мальта </option>
+          <option value="35"> Югославая </option>
+          <option value="36"> Португалия </option>
+          <option value="37"> Румыния </option>
+          <option value="38"> Хорватия </option>
+          <option value="39"> ЮАР </option>
+          <option value="40"> Куба </option>
+          <option value="41"> Колумбия </option>
+          <option value="42"> Израиль </option>
+          <option value="43"> Намибия </option>
+          <option value="44"> Турция </option>
+          <option value="45"> Бельгия </option>
+          <option value="46"> Сальвадор </option>
+          <option value="47"> Исландия </option>
+          <option value="48"> Венгрия </option>
+          <option value="49"> Южная Корея </option>
+          <option value="50"> Лихтенштейн </option>
+          <option value="51"> Болгария </option>
+          <option value="52"> Филлипины </option>
+          <option value="53"> Доминикана </option>
+          <option value="55"> Марокко </option>
+          <option value="56"> Таиланд </option>
+          <option value="57"> Кения </option>
+          <option value="58"> Пакистан </option>
+          <option value="59"> Иран </option>
+          <option value="60"> Панама </option>
+          <option value="61"> Аруба </option>
+          <option value="62"> Ямайка </option>
+          <option value="63"> Греция </option>
+          <option value="64"> Тунис </option>
+          <option value="65"> Кыргызстан </option>
+          <option value="66"> Пуэрто Рико </option>
+          <option value="67"> Казахстан </option>
+          <option value="68"> Югославая (ФР) </option>
+          <option value="69"> Алжир </option>
+          <option value="70"> Германия (ГДР) </option>
+          <option value="71"> Сингапур </option>
+          <option value="72"> Словакия </option>
+          <option value="73"> Афганистан </option>
+          <option value="74"> Индонезия </option>
+          <option value="75"> Перу </option>
+          <option value="76"> Бермуды </option>
+          <option value="77"> Монако </option>
+          <option value="78"> Зимбабве </option>
+          <option value="79"> Вьетнам </option>
+          <option value="80"> Антильские Острова </option>
+          <option value="81"> Саудовская Аравия </option>
+          <option value="82"> Танзания </option>
+          <option value="84"> Ливия </option>
+          <option value="85"> Ливан </option>
+          <option value="86"> Кувейт </option>
+          <option value="87"> Египет </option>
+          <option value="88"> Литва </option>
+          <option value="89"> Венисуэла </option>
+          <option value="90"> Словения </option>
+          <option value="91"> Чили </option>
+          <option value="92"> Багамы </option>
+          <option value="93"> Эквадор </option>
+          <option value="94"> Коста-Рика </option>
+          <option value="95"> Кипр </option>
+          <option value="96"> Уругвай </option>
+          <option value="97"> Ирак </option>
+          <option value="98"> Мартиника </option>
+          <option value="99"> Эстония </option>
+          <option value="100"> ОАЭ </option>
+          <option value="101"> Бангладеш </option>
+          <option value="102"> Гвинея </option>
+          <option value="103"> Иордания </option>
+          <option value="104"> Латвия </option>
+          <option value="105"> Армения </option>
+          <option value="107"> Сирия </option>
+          <option value="108"> Шри-Ланка </option>
+          <option value="109"> Нигерия </option>
+          <option value="110"> Берег Слоновой Кости </option>
+          <option value="111"> Грузия </option>
+          <option value="112"> Сенегал </option>
+          <option value="113"> Монголия </option>
+          <option value="114"> Габон </option>
+          <option value="115"> Замбия </option>
+          <option value="116"> Албания </option>
+          <option value="117"> Камерун </option>
+          <option value="118"> Буркина-Фасо </option>
+          <option value="119"> Узбекистан </option>
+          <option value="120"> Малайзия </option>
+          <option value="121"> Сербия </option>
+          <option value="122"> Гана </option>
+          <option value="123"> Таджикистан </option>
+          <option value="124"> Гаити </option>
+          <option value="125"> Конго (ДРК) </option>
+          <option value="126"> Гватемала </option>
+          <option value="127"> Российская Империя </option>
+          <option value="128"> Беларусь</option>
+          <option value="129"> Молдова </option>
+          <option value="130"> Азербайджан </option>
+          <option value="131"> Палестина </option>
+          <option value="132"> Оккупированная Палестинская территория </option>
+          <option value="133"> Северная Корея </option>
+          <option value="134"> Никарагуа </option>
+          <option value="135"> Камбоджа </option>
+          <option value="136"> Ангола </option>
+          <option value="137"> Серьия и Черногория </option>
+          <option value="138"> Непал </option>
+          <option value="139"> Бенин </option>
+          <option value="140"> Гваделупа </option>
+          <option value="141"> Гренландия </option>
+          <option value="142"> Гвинея-Бисау </option>
+          <option value="143"> Макао </option>
+          <option value="144"> Парагвай </option>
+          <option value="145"> Мавритания </option>
+          <option value="146"> Руанда </option>
+          <option value="147"> Фарерские Острова </option>
+          <option value="148"> Кот-д’Ивуар </option>
+          <option value="149"> Гиблартар </option>
+          <option value="150"> Ботсвана </option>
+          <option value="151"> Боливия </option>
+          <option value="152"> Мадагаскар </option>
+          <option value="153"> Кабо-Верде </option>
+          <option value="154"> Чад </option>
+          <option value="155"> Мали </option>
+          <option value="156"> Фиджи </option>
+          <option value="157"> Бутан </option>
+          <option value="158"> Барбадос </option>
+          <option value="159"> Тринидад и Тобаго </option>
+          <option value="160"> Мозамбик </option>
+          <option value="161"> Заир </option>
+          <option value="162"> Андорра </option>
+          <option value="163"> Туркменистан </option>
+          <option value="164"> Гайана </option>
+          <option value="165"> Корея </option>
+          <option value="166"> Нигер </option>
+          <option value="167"> Конго </option>
+          <option value="168"> Того </option>
+          <option value="169"> Ватикан </option>
+          <option value="170"> Черногория </option>
+          <option value="171"> Бурунди </option>
+          <option value="172"> Папуа - Новая Гвинея </option>
+          <option value="173"> Бахрейн </option>
+          <option value="174"> Гондурас </option>
+          <option value="175"> Судан </option>
+          <option value="176"> Эфиопия </option>
+          <option value="177"> Йемен </option>
+          <option value="178"> Северный Вьетнам </option>
+          <option value="179"> Суринам </option>
+          <option value="180"> Маврикий </option>
+          <option value="181"> Белиз </option>
+          <option value="182"> Либерия </option>
+          <option value="183"> Лесото </option>
+          <option value="184"> Уганда </option>
+          <option value="185"> Каймановы острова </option>
+          <option value="186"> Антигуа и Барбуда </option>
+          <option value="187"> Западная Сахара  </option>
+          <option value="188"> Сан-Марино </option>
+          <option value="189"> Гуам </option>
+          <option value="190"> Косово </option>
+          <option value="191"> Лаос </option>
+          <option value="192"> Катар </option>
+          <option value="193"> Оман </option>
+          <option value="194"> Американские Виргинские острова </option>
+          <option value="195"> Сиам </option>
+          <option value="196"> Сьерра-Леоне </option>
+          <option value="197"> Эритрея </option>
+          <option value="198"> Сомали </option>
+          <option value="199"> Доминика </option>
+          <option value="200"> Бирма </option>
+          <option value="201"> Реюньон </option>
+          <option value="202"> Федеративные Штаты Микронезии </option>
+          <option value="203"> Самоа </option>
+          <option value="204"> Американское Самоа </option>
+          <option value="205"> Свазиленд </option>
+          <option value="206"> Французская Полинезия </option>
+          <option value="207"> Мьянма </option>
+          <option value="208"> Новая Каледония </option>
+          <option value="209"> Французская Гвиана </option>
+          <option value="210"> Сент-Винсент и Гренадины</option>
+          <option value="211"> Малави </option>
+          <option value="212"> Экваториальеая Гвинея </option>
+          <option value="213"> Коморы </option>
+          <option value="214"> Кирибати </option>
+          <option value="215"> Тувалу </option>
+          <option value="216"> Тимор-Лесте </option>
+          <option value="217"> ЦАР </option>
+          <option value="218"> Тонга </option>
+          <option value="219"> Гренада </option>
+          <option value="220"> Гамбия </option>
+          <option value="221"> Антарктида </option>
+          <option value="222"> Острова Кука </option>
+          <option value="223"> остров Мэн </option>
+          <option value="224"> Внешние малые острова США </option>
+          <option value="225"> Монтсеррат </option>
+          <option value="226"> Маршаловы острова </option>
+          <option value="227"> Бруней-Даруссалам </option>
+          <option value="228"> Сейшельские острова </option>
+          <option value="229"> Палау </option>
+          <option value="230"> Сент-Люсия </option>
+          <option value="231"> Вануату </option>
+          <option value="232"> Мальдивы </option>
+          <option value="233"> Босния </option>
+          <option value="234"> Уоллис и Футуна </option>
+          <option value="235"> Белоруссия </option>
+          <option value="236"> Киргизия </option>
+          <option value="239"> Джибути </option>
+          <option value="240"> Виргинские острова (США) </option>
+          <option value="241"> Северная Македония </option>
+          <option value="242"> Виргинские острова (Великобритания) </option>
+        </select>
+</br>
+        <select id='pages' onchange="pg=this.value; search2()">
+          <option value="1"> 1 страница </option>
+        </select>
+</br> 
+
+&nbsp; &nbsp; &nbsp; Выберите жанр, страну и критерии поиска, а потом нажмите искать.
+
+	<div class="fadeInElement">
+	<div class="top-gallery-item">
+        <div class="title-wrap">
+			<h2 class="title" style="width: 100%"> <input type="submit" style="background: var(--bg-color); font-size: 5pt; color: var(--light-text-color);border-radius: 11px; border-left: 0.5px var(--light-text-color) solid; border-right: 0.5px var(--light-text-color) solid; border-top: 0.5px var(--light-text-color) solid; border-bottom: 0.5px var(--light-text-color) solid;cursor: pointer;width: 25%; height: 25px;" onclick="location.href='/apps';" value="🔍Обычный">  <input type="submit" style="background: var(--bg-color); font-size: 5pt; color: var(--light-text-color);border-radius: 11px; border-left: 0.5px var(--light-text-color) solid; border-right: 0.5px var(--light-text-color) solid; border-top: 0.5px var(--light-text-color) solid; border-bottom: 0.5px var(--light-text-color) solid;cursor: pointer;width: 25%; height: 25px;" onclick="location.href='/genres/';" value="🔍По Жанрам"> </h2>
+        </div>
+
+
+        <div class="popularMovies is-scroll-right">
+            <div class="vlist is-scroll-right">
+    <div class="vlist-holder js-kinetic kinetic-active">
+        <ul id="items" class="items js-kinetic-inner js-popularMovies">
+
+</div>
+
+<div class="timer">
+    <h3><b> До конца текущей подписки осталось: </b></h3> 
+    <div class="timer__items"> <p align="center">
+      <div class="timer__item timer__days">00</div>
+      <div class="timer__item timer__hours">00</div>
+      <div class="timer__item timer__minutes">00</div>
+      <div class="timer__item timer__seconds">00</div> </p>
+    </div>
+  </div>
+
+
+
+
+</br> </br> </br>
+
+    </div>
+	</div>
+<script>
+  genres=25;
+  countries=54;
+  totalPages=1;
+  pg=1;
+  sorting="NUM_VOTE";
+  kinofilms="ALL";
+  firstrating=0;
+  secondrating=10;
+  firstyear=1000;
+  secondyear=3000;
+  thisyear=new Date().getFullYear();
+  contrlyear=1900;
+  contrlpage=2;
+const yearfrom = document.getElementById("yearfrom");
+const yearto = document.getElementById("yearto");
+  const years = () => {
+    while (thisyear>=contrlyear) {
+    const option = document.createElement('option');
+    option.textContent=thisyear;
+    yearfrom.appendChild(option);
+    option.setAttribute("value", thisyear);
+    const option2 = document.createElement('option');
+    option2.textContent=thisyear;
+    yearto.appendChild(option2);
+    option2.setAttribute("value", thisyear);
+    thisyear-=1
+    }
+  }
+years();
+
+const pages = document.getElementById("pages");
+const npages = (totalPages) => {
+  while (contrlpage<=totalPages) {
+  const option = document.createElement('option');
+  option.textContent=contrlpage+" страница";
+  pages.appendChild(option);
+  option.setAttribute("value", contrlpage);
+  contrlpage+=1;
+  }
+  contrlpage=2
+}
+
+const rmpages = () => {
+i=pages.childElementCount;
+while (i>=2) {
+pages.removeChild(pages.lastChild);
+i-=1;
+  }
+}
+function search(){
+	var text = document.getElementById('text').value;
+	$.ajax({
+			 		async: true,
+			 		crossDomain: true,
+					url: 'https://kinopoiskapiunofficial.tech/api/v2.2/films?countries=' + countries + '&genres=' + genres + '&order=' + sorting + '&type=' + kinofilms + '&ratingFrom=' + firstrating + '&ratingTo=' + secondrating + '&yearFrom=' + firstyear + '&yearTo=' + secondyear + '&keyword=' + text + '&page=' + pg,
+					type: 'GET',
+			 		headers: {'X-API-KEY':'1c547473-0385-454b-a351-8c41f27ea5fd'},
+					success: function(response){
+							$('.title').empty();
+							$('.items').empty();
+                                                var totalPages = response.totalPages;
+	         				var a = response.items;
+			 				var index, len;
+              rmpages();
+              npages(totalPages);
+			 				for (index = 0, len = a.length; index < len; ++index) {
+				 				var item = a[index];
+					 				 $('.items').append('<li class="item" style="margin-bottom: 1rem">    <a class="link" href="/kino?id='+item.kinopoiskId+'&title='+item.nameRu+' ('+item.year+')" target="_blank" title="'+item.nameRu+'</br>'+item.nameOriginal+' ('+item.year+')">        <div class="cover-wrap">          <div class="cover js-b-lazy fadeIn animated" style="background-image: url('+item.posterUrlPreview+');"></div></div>     <div class="description">     <h3 class="title">'+item.nameRu+'</br>'+item.nameOriginal+'</h3>      <span class="desc">     <span class="rating">'+item.ratingKinopoisk+'</span>    <span class="year">'+item.year+'</span></span></div></a></li>');
+							}
+					}
+	});
+	};
+
+  function search2(){
+  	var text = document.getElementById('text').value;
+  	$.ajax({
+  			 		async: true,
+  			 		crossDomain: true,
+  					url: 'https://kinopoiskapiunofficial.tech/api/v2.2/films?countries=' + countries + '&order=' + sorting + '&type=' + kinofilms + '&ratingFrom=' + firstrating + '&ratingTo=' + secondrating + '&yearFrom=' + firstyear + '&yearTo=' + secondyear + '&keyword=' + text + '&page=' + pg,
+  					type: 'GET',
+  			 		headers: {'X-API-KEY':'1c547473-0385-454b-a351-8c41f27ea5fd'},
+  					success: function(response){
+  							$('.title').empty();
+  							$('.items').empty();
+                                                  var totalPages = response.totalPages;
+  	         				var a = response.items;
+  			 				var index, len;
+  			 				for (index = 0, len = a.length; index < len; ++index) {
+  				 				var item = a[index];
+  					 				 $('.items').append('<li class="item" style="margin-bottom: 1rem">    <a class="link" href="/kino?id='+item.kinopoiskId+'&title='+item.nameRu+' ('+item.year+')" target="_blank" title="'+item.nameRu+'</br>'+item.nameOriginal+' ('+item.year+')">        <div class="cover-wrap">          <div class="cover js-b-lazy fadeIn animated" style="background-image: url('+item.posterUrlPreview+');"></div></div>     <div class="description">     <h3 class="title">'+item.nameRu+'</br>'+item.nameOriginal+'</h3>      <span class="desc">     <span class="rating">'+item.ratingKinopoisk+'</span>    <span class="year">'+item.year+'</span></span></div></a></li>');
+  							}
+  					}
+  	});
+  	};
+$(document).ready(function(){
+                 $("#text").keypress(function(e){
+                   if(e.keyCode==13){
+                   //нажата клавиша enter - здесь ваш код
+                   search();
+                   }
+                 });
+
+             });
+</script>
+<script>
+var oldRelease,navbar=document.getElementById("navbar");var loadedOldReleases=!1;function getOldReleases(e){for(i=0;i<e.length;i++){var n=e[i],t=createElement("div","releaseTableView"),a=createElement("span","releaseVersion");a.innerText=n.name,t.appendChild(a);var o=createElement("span","releaseDate");o.innerText=new Date(n.published_at).toLocaleDateString(),t.appendChild(o);var r=createElement("div","button");r.innerText="Download";var d=n.assets.reverse();for(getLink=0;getLink<d.length;getLink++)var s=d[getLink].browser_download_url;var l=createElement("a");l.href=s,l.appendChild(r),t.appendChild(l);var c=new showdown.Converter;t.innerHTML+=c.makeHtml(n.body.replace(/^((?!^- .*).)*$/gm,""));try{if(1<t.getElementsByTagName("ul")[0].childElementCount){var m=createElement("div","viewMoreButton");m.setAttribute("onClick","expandChangelog(this)"),m.innerText="more",t.appendChild(m)}}catch(e){}document.getElementById("legacyReleases").appendChild(t)}loadedOldReleases=!0}function updateProgessBar(e){document.getElementById("progressBar").style.transform="translateX(-"+(100-e)+"%)"}function createElement(e,n){var t=document.createElement(e);return n&&(t.className=n),t}function goTo(e){var n=0;e&&(n=document.getElementById(e).getBoundingClientRect().top-document.body.getBoundingClientRect().top+180),document.body.scrollTop=n,document.documentElement.scrollTop=n}function expandChangelog(e){"more"==e.innerText?e.innerText="less":e.innerText="more",e.parentNode.classList.toggle("expanded")}function viewLegacyVersions(){viewLegacyVersionsButton=document.getElementById("viewLegacyVersions"),"View Previous Versions"==viewLegacyVersionsButton.innerText?(loadedOldReleases||getOldReleases(oldRelease),document.getElementById("legacyReleases").style.display="inline",viewLegacyVersionsButton.innerText="Hide Previous Versions"):(document.getElementById("legacyReleases").style.display="none",viewLegacyVersionsButton.innerText="View Previous Versions")}var darkMode,animateHTML=function(){var n,t;function e(){n=document.querySelectorAll(".hidden"),t=window.innerHeight,window.addEventListener("scroll",a),window.addEventListener("resize",e),a()}function a(){for(var e=0;e<n.length;e++){n[e].getBoundingClientRect().top-t<=-200&&(n[e].className=n[e].className.replace("hidden","fadeInElement"))}}return{init:e}};function toggleDarkMode(){createCookie("darkMode",darkMode=darkMode?(document.getElementsByTagName("html")[0].classList.remove("darkMode"),!1):(enableDarkMode(),!0),999999)}function enableDarkMode(){document.getElementsByTagName("html")[0].classList.add("darkMode")}function readCookie(e){for(var n=e+"=",t=document.cookie.split(";"),a=0;a<t.length;a++){for(var o=t[a];" "==o.charAt(0);)o=o.substring(1,o.length);if(0==o.indexOf(n))return"true"==o.substring(n.length,o.length)||"false"!=o.substring(n.length,o.length)&&o.substring(n.length,o.length)}return null}function createCookie(e,n,t){if(t){var a=new Date;a.setTime(a.getTime()+24*t*60*60*1e3);var o="; expires="+a.toGMTString()}else o="";document.cookie=e+"="+n+o+"; path=/"}animateHTML().init(),window.matchMedia("(prefers-color-scheme: dark)").matches&&enableDarkMode(),document.cookie?(darkMode=readCookie("darkMode"))&&enableDarkMode():darkMode=!1;
+</script>
+
+
+    </div>
+  </div>
+
+<script src="/js/checking.js"></script>
+
+<script>
+const pass = JSON.parse(localStorage.getItem('pass'))
+if (pass != window.hash.acthash) {
+  while (0==0) {
+    alert("Доступ запрещён, вы не авторизованы или не ввели пароль доступа на месяц! Ваш пароль доступа на месяц устарел или вы ввели его неправильно!")
+  }
+}
+</script>
+
+</body>
+</html>
