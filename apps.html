@@ -36,12 +36,108 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
  
   <script src="https://use.fontawesome.com/4ca20d00e4.js"></script>
+<style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      :root {
+        scroll-behavior: smooth;
+      }
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #00ff00;
+      -webkit-text-size-adjust: 100%;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      display: flex;
+      justify-content: center;
+    }
+
+    .timer__items {
+      display: flex;
+      font-size: 48px;
+    }
+
+    .timer__item {
+      position: relative;
+      min-width: 60px;
+      margin-left: 10px;
+      margin-right: 10px;
+      padding-bottom: 15px;
+      text-align: center;
+    }
+
+    .timer__item::before {
+      content: attr(data-title);
+      display: block;
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      font-size: 14px;
+    }
+
+    .timer__item:not(:last-child)::after {
+      content: ':';
+      position: absolute;
+      right: -15px;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // конечная дата
+      const deadline = new Date(new Date().getFullYear(), new Date().getMonth() + 1, 01);
+      // id таймера
+      let timerId = null;
+      // склонение числительных
+      function declensionNum(num, words) {
+        return words[(num % 100 > 4 && num % 100 < 20) ? 2 : [2, 0, 1, 1, 1, 2][(num % 10 < 5) ? num % 10 : 5]];
+      }
+      // вычисляем разницу дат и устанавливаем оставшееся времени в качестве содержимого элементов
+      function countdownTimer() {
+        const diff = deadline - new Date();
+        if (diff <= 0) {
+          clearInterval(timerId);
+        }
+        const days = diff > 0 ? Math.floor(diff / 1000 / 60 / 60 / 24) : 0;
+        const hours = diff > 0 ? Math.floor(diff / 1000 / 60 / 60) % 24 : 0;
+        const minutes = diff > 0 ? Math.floor(diff / 1000 / 60) % 60 : 0;
+        const seconds = diff > 0 ? Math.floor(diff / 1000) % 60 : 0;
+        $days.textContent = days < 10 ? '0' + days : days;
+        $hours.textContent = hours < 10 ? '0' + hours : hours;
+        $minutes.textContent = minutes < 10 ? '0' + minutes : minutes;
+        $seconds.textContent = seconds < 10 ? '0' + seconds : seconds;
+        $days.dataset.title = declensionNum(days, ['день', 'дня', 'дней']);
+        $hours.dataset.title = declensionNum(hours, ['час', 'часа', 'часов']);
+        $minutes.dataset.title = declensionNum(minutes, ['минута', 'минуты', 'минут']);
+        $seconds.dataset.title = declensionNum(seconds, ['секунда', 'секунды', 'секунд']);
+      }
+      // получаем элементы, содержащие компоненты даты
+      const $days = document.querySelector('.timer__days');
+      const $hours = document.querySelector('.timer__hours');
+      const $minutes = document.querySelector('.timer__minutes');
+      const $seconds = document.querySelector('.timer__seconds');
+      // вызываем функцию countdownTimer
+      countdownTimer();
+      // вызываем функцию countdownTimer каждую секунду
+      timerId = setInterval(countdownTimer, 1000);
+    });
+  </script>
 
 </head>
 <body>
 		<div id="navbar" class="">
         <div id="navInner">
-            <span id="navbarName" onclick="location.href='/genres/';">🔍Дудочник🔎</span>
+            <span id="navbarName" onclick="location.href='/genres';">🔍Дудочник🔎</span>
         </div>
     </div>
   <div class="container">
@@ -68,15 +164,35 @@
 	<div class="fadeInElement">
 	<div class="top-gallery-item">
         <div class="title-wrap">
-			<h2 class="title" style="width: 100%">     <input type="submit" style="background: var(--bg-color); font-size: 5pt; color: var(--light-text-color);border-radius: 11px; border-left: 0.5px var(--light-text-color) solid; border-right: 0.5px var(--light-text-color) solid; border-top: 0.5px var(--light-text-color) solid; border-bottom: 0.5px var(--light-text-color) solid;cursor: pointer;width: 25%; height: 25px;" onclick="location.href='/genres/';" value="🔍Расширенный">      <input type="submit" style="background: var(--bg-color); font-size: 5pt; color: var(--light-text-color);border-radius: 11px; border-left: 0.5px var(--light-text-color) solid; border-right: 0.5px var(--light-text-color) solid; border-top: 0.5px var(--light-text-color) solid; border-bottom: 0.5px var(--light-text-color) solid;cursor: pointer;width: 25%; height: 25px;" onclick="location.href='/genres/genres';" value="🔍По Жанрам">     <input type="submit" style="background: var(--bg-color); font-size: 5pt; color: var(--light-text-color);border-radius: 11px; border-left: 0.5px var(--light-text-color) solid; border-right: 0.5px var(--light-text-color) solid; border-top: 0.5px var(--light-text-color) solid; border-bottom: 0.5px var(--light-text-color) solid;cursor: pointer;width: 25%; height: 25px;" onclick="location.href='/genres/country';" value="🔍По Странам"></h2>
+			<h2 class="title" style="width: 100%"><input type="submit" style="background: var(--bg-color); font-size: 5pt; color: var(--light-text-color);border-radius: 11px; border-left: 0.5px var(--light-text-color) solid; border-right: 0.5px var(--light-text-color) solid; border-top: 0.5px var(--light-text-color) solid; border-bottom: 0.5px var(--light-text-color) solid;cursor: pointer;width: 25%; height: 25px;" onclick="location.href='/genres/';" value="🔍Расширенный">      <input type="submit" style="background: var(--bg-color); font-size: 5pt; color: var(--light-text-color);border-radius: 11px; border-left: 0.5px var(--light-text-color) solid; border-right: 0.5px var(--light-text-color) solid; border-top: 0.5px var(--light-text-color) solid; border-bottom: 0.5px var(--light-text-color) solid;cursor: pointer;width: 25%; height: 25px;" onclick="location.href='/genres/genres';" value="🔍По Жанрам">     <input type="submit" style="background: var(--bg-color); font-size: 5pt; color: var(--light-text-color);border-radius: 11px; border-left: 0.5px var(--light-text-color) solid; border-right: 0.5px var(--light-text-color) solid; border-top: 0.5px var(--light-text-color) solid; border-bottom: 0.5px var(--light-text-color) solid;cursor: pointer;width: 25%; height: 25px;" onclick="location.href='/genres/country';" value="🔍По Странам"> </br> 
+<div class="timer">
+    <h3><b> До конца текущей подписки осталось: </b></h3> 
+    <div class="timer__items"> 
+    <p align="center">
+      <div class="timer__item timer__days">00</div>
 
+      <div class="timer__item timer__hours">00</div>
+
+      <div class="timer__item timer__minutes">00</div>
+
+      <div class="timer__item timer__seconds">00</div>
+    </p>
+    </div>
+  </div>
+</h2>
         </div>
         <div class="popularMovies is-scroll-right">
             <div class="vlist is-scroll-right">
     <div class="vlist-holder js-kinetic kinetic-active">
         <ul id="items" class="items js-kinetic-inner js-popularMovies">
 </div>
-</br> </br> 
+
+
+
+
+
+
+</br> </br> </br>
 
     </div>
 	</div>
@@ -102,7 +218,7 @@
 	$.ajax({
 			 		async: true,
 			 		crossDomain: true,
-					url: 'https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_100_POPULAR_FILMS&page=2',
+					url: 'https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_100_POPULAR_FILMS&page=1',
 					type: 'GET',
 			 		headers: {'X-API-KEY':'1c547473-0385-454b-a351-8c41f27ea5fd'},
 					success: function(response){
@@ -118,7 +234,7 @@
 	$.ajax({
 			 		async: true,
 			 		crossDomain: true,
-					url: 'https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_100_POPULAR_FILMS&page=3',
+					url: 'https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_100_POPULAR_FILMS&page=1',
 					type: 'GET',
 			 		headers: {'X-API-KEY':'1c547473-0385-454b-a351-8c41f27ea5fd'},
 					success: function(response){
@@ -178,7 +294,7 @@ var oldRelease,navbar=document.getElementById("navbar");var loadedOldReleases=!1
 const pass = JSON.parse(localStorage.getItem('pass'))
 if (pass != window.hash.acthash) {
   while (0==0) {
-    alert("Доступ запрещён, вы не авторизованы или не ввели пароль доступа на месяц! Ваш пароль доступа на месяц устарел или вы ввели его неправильно!")
+    alert("Доступ запрещён, вы не купили доступ за март месяц или не авторизованы или не ввели пароль доступа на месяц! Ваш пароль доступа на месяц устарел или вы ввели его неправильно!")
   }
 }
 </script>
